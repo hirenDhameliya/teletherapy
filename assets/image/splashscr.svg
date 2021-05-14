@@ -1,0 +1,17 @@
+<svg id="Group_48341" data-name="Group 48341" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="812" viewBox="0 0 375 812">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="-0.049" x2="0.043" y2="1.039" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#be5ff9"/>
+      <stop offset="1" stop-color="#4d2bd5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.068" y1="1.032" x2="0.265" y2="0.119" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4d2bd5"/>
+      <stop offset="1" stop-color="#be5ff9"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_6" data-name="Rectangle 6" width="375" height="812" fill="url(#linear-gradient)"/>
+  <text id="Teletherapy" transform="translate(119 466)" fill="#fff" font-size="28" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Teletherapy</tspan></text>
+  <text id="Find_Your_Favorite_Therapist" data-name="Find Your Favorite Therapist" transform="translate(102 491)" fill="rgba(255,255,255,0.8)" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Find Your Favorite Therapist</tspan></text>
+  <rect id="Rectangle_9953" data-name="Rectangle 9953" width="110" height="110" rx="20" transform="translate(133 317)" fill="#fff"/>
+  <path id="Path_27" data-name="Path 27" d="M518.611,152.6c-3.284-6.122-8.8-9.96-14.385-10.017h-.134c-3.909,0-9.44,1.758-14.559,9.644-5.12-7.886-10.65-9.644-14.56-9.644h-.134c-5.588.057-11.1,3.9-14.385,10.017a24.082,24.082,0,0,0,.853,24.432c5.161,7.951,14.183,15,27.581,21.559l.644.315.644-.315c13.4-6.556,22.421-13.608,27.581-21.559A24.082,24.082,0,0,0,518.611,152.6ZM501.87,173.494a1.34,1.34,0,0,1-1.34,1.34h-6.977v6.977a1.34,1.34,0,0,1-1.34,1.34h-5.359a1.34,1.34,0,0,1-1.34-1.34v-6.977h-6.978a1.34,1.34,0,0,1-1.34-1.34v-5.359a1.34,1.34,0,0,1,1.34-1.34h6.978v-6.977a1.34,1.34,0,0,1,1.34-1.34h5.359a1.34,1.34,0,0,1,1.34,1.34v5.858l.013,1.12h6.964a1.34,1.34,0,0,1,1.34,1.34Z" transform="translate(-301.533 201.417)" stroke="#707070" stroke-width="1" fill="url(#linear-gradient-2)"/>
+</svg>

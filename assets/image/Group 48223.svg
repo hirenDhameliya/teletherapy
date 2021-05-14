@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_48223" data-name="Group 48223" transform="translate(-7103 -1884)">
+    <rect id="Rectangle_10129" data-name="Rectangle 10129" width="50" height="50" rx="10" transform="translate(7103 1884)" fill="#fff" opacity="0.3"/>
+    <path id="Icon_material-keyboard-voice" data-name="Icon material-keyboard-voice" d="M16.572,20.053a3.872,3.872,0,0,0,3.875-3.888l.013-7.776a3.888,3.888,0,1,0-7.776,0v7.776A3.883,3.883,0,0,0,16.572,20.053Zm6.869-3.888a6.725,6.725,0,0,1-6.869,6.61A6.725,6.725,0,0,1,9.7,16.164H7.5a9.041,9.041,0,0,0,7.776,8.709v4.251h2.592V24.874a9.03,9.03,0,0,0,7.776-8.709Z" transform="translate(7111.5 1892.5)" fill="#fff"/>
+  </g>
+</svg>
