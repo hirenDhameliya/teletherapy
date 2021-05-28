@@ -1,25 +1,21 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
-import 'package:teletherapy/forgot_password.dart';
-import 'package:teletherapy/home_page.dart';
-import 'package:teletherapy/signup_page.dart';
+import 'package:teletherapy/signin_page.dart';
 
-class SignInPage extends StatefulWidget {
+class SignUpPage extends StatefulWidget {
   @override
-  _SignInPageState createState() => _SignInPageState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   GlobalKey<FormState> _form = GlobalKey<FormState>();
   bool _hidePass = true;
   bool _selected = false;
+
   @override
-
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Stack(
@@ -83,7 +79,7 @@ class _SignInPageState extends State<SignInPage> {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 15),
                                   child: Text(
-                                    'WelCome Back',
+                                    'Create Account',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 30,
@@ -98,7 +94,7 @@ class _SignInPageState extends State<SignInPage> {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 6),
                                   child: Text(
-                                    'Sign In your account',
+                                    'Create a new account',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w300,
                                       fontSize: 18,
@@ -115,6 +111,45 @@ class _SignInPageState extends State<SignInPage> {
                               key: _form,
                               child: Column(
                                 children: [
+                                  TextFormField(
+                                    decoration: InputDecoration(
+                                      prefixIcon: Icon(
+                                        Icons.person_rounded,
+                                        color: Color(0xffBE5FF9),
+                                      ),
+                                      hintText: 'Username',
+                                      hintStyle: TextStyle(
+                                          color: Colors.black38,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 17),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: Colors.black38,
+                                          width: 1.5,
+                                        ),
+                                      ),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(10),
+                                        ),
+                                      ),
+                                    ),
+                                    validator: (_user) {
+                                      bool _userValid =
+                                          RegExp(r"^[a-zA-Z]+").hasMatch(_user);
+                                      if (_user.isEmpty)
+                                        return 'please enter your name';
+                                      if (!_userValid)
+                                        return 'please enter your valide name';
+                                      return null;
+                                    },
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
                                   TextFormField(
                                     decoration: InputDecoration(
                                       prefixIcon: Icon(
@@ -148,6 +183,46 @@ class _SignInPageState extends State<SignInPage> {
                                         return 'please enter your email';
                                       if (!_emailValid)
                                         return 'please enter your valide email';
+                                      return null;
+                                    },
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  TextFormField(
+                                    keyboardType: TextInputType.number,
+                                    decoration: InputDecoration(
+                                      prefixIcon: Icon(
+                                        Icons.phone,
+                                        color: Color(0xffBE5FF9),
+                                      ),
+                                      hintText: 'Phone Number',
+                                      hintStyle: TextStyle(
+                                          color: Colors.black38,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 17),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: Colors.black38,
+                                          width: 1.5,
+                                        ),
+                                      ),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(10),
+                                        ),
+                                      ),
+                                    ),
+                                    validator: (_number) {
+                                      bool _numberValid =
+                                          RegExp(r"^[0-9]+$").hasMatch(_number);
+                                      if (_number.isEmpty)
+                                        return 'please enter your number';
+                                      if (!_numberValid)
+                                        return 'please enter your valide number';
                                       return null;
                                     },
                                     style: TextStyle(color: Colors.black),
@@ -207,7 +282,7 @@ class _SignInPageState extends State<SignInPage> {
                                     style: TextStyle(color: Colors.black),
                                   ),
                                   SizedBox(
-                                    height: 20,
+                                    height: 10,
                                   ),
                                 ],
                               ),
@@ -227,17 +302,16 @@ class _SignInPageState extends State<SignInPage> {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: _selected
-                                          ?  Colors.deepPurple
+                                          ? Colors.deepPurple
                                           : Colors.white,
-                                      border: Border.all(
-                                           color: Colors.black45),
+                                      border: Border.all(color: Colors.black45),
                                     ),
                                     child: Padding(
                                         padding: const EdgeInsets.all(3.0),
                                         child: _selected
                                             ? Icon(
                                                 Icons.check,
-                                                size:16,
+                                                size: 16,
                                                 color: Colors.white,
                                               )
                                             : Container()),
@@ -245,55 +319,32 @@ class _SignInPageState extends State<SignInPage> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 8),
-                                  child: Text('Remember me'),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left:65),
-                                  child: InkWell(
-                                    onTap: (){
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => ForGotPassword(),
-                                        ),
-                                      );
-                                    },
-                                    child: TextButton(
-                                      child: Text('Forgot Password?'),
-                                    ),
-                                  ),
+                                  child: Text('I agree With all terms and conditions '),
                                 ),
                               ],
                             ),
-                            InkWell(
-                              onTap: (){
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomePage(),
-                                  ),
-                                );
-                              },
-                              child: Container(
-                                height: 50,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10),
-                                  ),
-                                  color: Color(0xffBE5FF9),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Container(
+                              height: 50,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(10),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(top: 12),
-                                  child: Text(
-                                    'Sign In',
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.white,
-                                    ),
-                                    textAlign: TextAlign.center,
+                                color: Color(0xffBE5FF9),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 12),
+                                child: Text(
+                                  'Sign In',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white,
                                   ),
+                                  textAlign: TextAlign.center,
                                 ),
                               ),
                             ),
@@ -301,125 +352,28 @@ class _SignInPageState extends State<SignInPage> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(left: 50),
-                                  child: Text('Don\'t have an account ?'),
+                                  child: Text('Already have an account ?'),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left:20),
+                                  padding: const EdgeInsets.only(left: 20),
                                   child: InkWell(
-                                    onTap: (){
-                                      Navigator.push(
+                                    onTap: () {
+                                      Navigator.pop(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => SignUpPage(),
+                                          builder: (context) => SignInPage(),
                                         ),
                                       );
                                     },
                                     child: TextButton(
                                       child: Text(
-                                        'Sign Up',style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xffBE5FF9),
+                                        'Sign In',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          color: Color(0xffBE5FF9),
+                                        ),
                                       ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Container(
-                                      margin: const EdgeInsets.only(
-                                          left: 10.0, right: 15.0),
-                                      child: Divider(
-                                        color: Colors.black,
-                                        height: 35,
-                                      )),
-                                ),
-                                Text("Or Continue with"),
-                                Expanded(
-                                  child: Container(
-                                    margin: const EdgeInsets.only(
-                                        left: 15.0, right: 10.0),
-                                    child: Divider(
-                                      color: Colors.black,
-                                      height: 35,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Container(
-                                  height: 45,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Colors.black26,
-                                          blurRadius: 3,
-                                          offset: Offset(1, 1),
-                                          spreadRadius: 2.5),
-                                    ],
-                                  ),
-                                  child: Image(
-                                    image: Svg(
-                                      "assets/image/google.svg",
-                                      size: Size.fromRadius(16),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  height: 45,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Colors.black26,
-                                          blurRadius: 3,
-                                          offset: Offset(1, 1),
-                                          spreadRadius: 2.5),
-                                    ],
-                                  ),
-                                  child: Image(
-                                    image: Svg(
-                                      "assets/image/facebook.svg",
-                                      size: Size.fromRadius(16),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  height: 45,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Colors.black26,
-                                          blurRadius: 3,
-                                          offset: Offset(1, 1),
-                                          spreadRadius: 2.5),
-                                    ],
-                                  ),
-                                  child: Image(
-                                    image: Svg(
-                                      "assets/image/twitter.svg",
-                                      size: Size.fromRadius(16),
                                     ),
                                   ),
                                 ),

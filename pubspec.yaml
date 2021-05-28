@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get: ^4.1.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -32,20 +33,28 @@ dependencies:
   carousel_slider: ^3.0.0
   provider: ^5.0.0
   otp_text_field: ^1.1.0
+  country_list_pick: ^1.0.1+4
+#  flutter_twitter_login: ^1.1.0
+#  flutter_facebook_auth: ^1.0.0
+#  google_sign_in: ^4.5.1
+#  firebase_core: ^1.1.1
+#  firebase_auth: ^1.1.4
+  material_floating_search_bar: ^0.3.4
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_native_splash: ^1.1.8+4
-flutter_native_splash:
-  android: true
-  ios: true
-  android_gravity: fill_vertical
-  ios_content_mode: fill_vertical
-  image: "assets/image/splash.png"
-  fullscreen: true
-#  color: "BE5FF9"
+#  flutter_native_splash: ^1.1.8+4
+
+
+#
+#flutter_native_splash:
+#  android: true
+#  ios: true
+#  android_gravity: cover
+#  ios_content_mode: cover
+#  image: "assets/image/splash.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
