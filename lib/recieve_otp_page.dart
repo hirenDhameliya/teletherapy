@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';
-import 'package:teletherapy/forgot_password.dart';
 import 'package:teletherapy/reset_password.dart';
 
 class OtpRecievePage extends StatefulWidget {

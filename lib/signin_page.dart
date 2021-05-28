@@ -259,6 +259,7 @@ class _SignInPageState extends State<SignInPage> {
                                       );
                                     },
                                     child: TextButton(
+                                      onPressed: (){},
                                       child: Text('Forgot Password?'),
                                     ),
                                   ),
@@ -315,6 +316,7 @@ class _SignInPageState extends State<SignInPage> {
                                       );
                                     },
                                     child: TextButton(
+                                      onPressed: (){},
                                       child: Text(
                                         'Sign Up',style: TextStyle(
                                         fontSize: 16,

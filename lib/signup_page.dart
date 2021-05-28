@@ -1,7 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:teletherapy/signin_page.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -366,6 +365,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                       );
                                     },
                                     child: TextButton(
+                                      onPressed: (){},
                                       child: Text(
                                         'Sign In',
                                         style: TextStyle(

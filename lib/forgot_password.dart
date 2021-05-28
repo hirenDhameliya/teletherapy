@@ -96,42 +96,45 @@ class _ForGotPasswordState extends State<ForGotPassword> {
                             SizedBox(
                               height: 12,
                             ),
-                            TextFormField(
-                              decoration: InputDecoration(
-                                prefixIcon: Icon(
-                                  Icons.local_post_office,
-                                  color: Color(0xffBE5FF9),
-                                ),
-                                hintText: 'Email',
-                                hintStyle: TextStyle(
-                                    color: Colors.black38,
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 17),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)),
-                                  borderSide: BorderSide(
-                                    color: Colors.black38,
-                                    width: 1.5,
+                            Form(
+                              key: _form,
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                  prefixIcon: Icon(
+                                    Icons.local_post_office,
+                                    color: Color(0xffBE5FF9),
+                                  ),
+                                  hintText: 'Email',
+                                  hintStyle: TextStyle(
+                                      color: Colors.black38,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 17),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: Colors.black38,
+                                      width: 1.5,
+                                    ),
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(10),
+                                    ),
                                   ),
                                 ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10),
-                                  ),
-                                ),
+                                validator: (_email) {
+                                  bool _emailValid = RegExp(
+                                          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                                      .hasMatch(_email);
+                                  if (_email.isEmpty)
+                                    return 'please enter your email';
+                                  if (!_emailValid)
+                                    return 'please enter your valide email';
+                                  return null;
+                                },
+                                style: TextStyle(color: Colors.black),
                               ),
-                              validator: (_email) {
-                                bool _emailValid = RegExp(
-                                        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                                    .hasMatch(_email);
-                                if (_email.isEmpty)
-                                  return 'please enter your email';
-                                if (!_emailValid)
-                                  return 'please enter your valide email';
-                                return null;
-                              },
-                              style: TextStyle(color: Colors.black),
                             ),
                             SizedBox(
                               height:12,
