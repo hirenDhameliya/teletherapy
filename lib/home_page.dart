@@ -234,8 +234,63 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
+                    Container(
+                      height:150,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.shade300,
+                            blurRadius: 10,
+                            spreadRadius: 5,
+                            offset: Offset(3, 3),
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                maxRadius: 40,
+                                backgroundColor: Colors.grey,
+                                // child: Image(
+                                //   image: Svg(
+                                //    'assets/image/doctor1.svg'
+                                //   ),
+                                //   fit: BoxFit.cover,
+                                // ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20,top:30),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('dr Hiren'),
+                                    Text('rating 4.8'),
+                                    Text('skin,VD & hairTransplant'),
+                                    Text('MBBS,Bcs(helth),DDv,MPH'),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 15,left: 10,right: 15),
+                            child: Divider(
+                              height: 3,
+                              color: Colors.grey.shade300,
+                              thickness: 3,
+                            ),
+                          ),
 
-
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

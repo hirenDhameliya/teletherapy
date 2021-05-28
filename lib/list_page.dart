@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:teletherapy/model.dart';
 
 final categories1 = [
@@ -26,7 +27,6 @@ final categories1 = [
     image: 'assets/image/dental.svg',
     name: 'Dental',
   ),
-
 ];
 
 final categories2 = [
@@ -54,5 +54,17 @@ final categories2 = [
     id: 5,
     image: 'assets/image/covid19.svg',
     name: 'Covid-19',
+  ),
+];
+
+final therapist = [
+  Detail(
+    image: 'assets/image/doctor1.svg',
+    name: 'Dr.Hiren Dhameliya',
+    rating: '4.4',
+    degree: 'MBBS,Bcs(helth),DDv,MPH',
+    speciality: 'skin,VD & hairTransplant',
+    respondTime: 'Respond within 2h',
+    fees: '\$300',
   ),
 ];
