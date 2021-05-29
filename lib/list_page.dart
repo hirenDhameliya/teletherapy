@@ -59,8 +59,8 @@ final categories2 = [
 
 final therapist = [
   Detail(
-    image: 'assets/image/doctora.svg',
-    name: 'Dr. STEVEN N CARTER',
+    image: 'assets/image/doctora.png',
+    name: 'Dr. steven carter',
     rating: '4.4',
     degree: 'MBBS,Bcs(helth),DDv,MPH',
     speciality: 'skin,VD & hairTransplant',
@@ -100,7 +100,48 @@ final therapist = [
     ),
   ),
   Detail(
-    image: 'assets/image/doctora.svg',
+    image: 'assets/image/doctorb.png',
+    name: 'Dr.',
+    rating: '4.4',
+    degree: 'MBBS,Bcs(helth),DDv,MPH',
+    speciality: 'skin,VD & hairTransplant',
+    respondTime: 'Respond within 2h',
+    fees: '\$300',
+    star: Row(
+      children: [
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star_border,
+          color: Colors.amber,
+          size: 20,
+        ),
+      ],
+    ),
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
+  ),
+  Detail(
+    image: 'assets/image/doctorc.png',
     name: 'Dr.Hiren Dhameliya',
     rating: '4.4',
     degree: 'MBBS,Bcs(helth),DDv,MPH',
@@ -141,7 +182,7 @@ final therapist = [
     ),
   ),
   Detail(
-    image: 'assets/image/doctora.svg',
+    image: 'assets/image/doctord.png',
     name: 'Dr.Hiren Dhameliya',
     rating: '4.4',
     degree: 'MBBS,Bcs(helth),DDv,MPH',
@@ -182,7 +223,48 @@ final therapist = [
     ),
   ),
   Detail(
-    image: 'assets/image/doctora.svg',
+    image: 'assets/image/doctore.png',
+    name: 'Dr.Hiren Dhameliya',
+    rating: '4.4',
+    degree: 'MBBS,Bcs(helth),DDv,MPH',
+    speciality: 'skin,VD & hairTransplant',
+    respondTime: 'Respond within 2h',
+    fees: '\$300',
+    star: Row(
+      children: [
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star_border,
+          color: Colors.amber,
+          size: 20,
+        ),
+      ],
+    ),
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
+  ),
+  Detail(
+    image: 'assets/image/doctorf.png',
     name: 'Dr.Hiren Dhameliya',
     rating: '4.4',
     degree: 'MBBS,Bcs(helth),DDv,MPH',

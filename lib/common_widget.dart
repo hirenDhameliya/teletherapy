@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:teletherapy/model.dart';
@@ -71,14 +72,21 @@ class CommonWidget {
           children: [
             Row(
               children: [
-                CircleAvatar(
-                  maxRadius: 40,
-                  backgroundColor: Colors.grey,
-                  child: Image(
-                    image: Svg(
-                      therapist.image,
+                Padding(
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Container(
+                    height: 75,
+                    width: 75,
+                    decoration: BoxDecoration(
+                      boxShadow: [BoxShadow( color: Colors.grey.shade200,
+                        blurRadius:5,
+                        spreadRadius:2,
+                        )],
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage(therapist.image),
+                      ),
                     ),
-                    fit: BoxFit.cover,
                   ),
                 ),
                 Padding(
@@ -91,8 +99,8 @@ class CommonWidget {
                         child: Text(
                           "${therapist.name}",
                           style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
+                            fontSize:18,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                       ),
