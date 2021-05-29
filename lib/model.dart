@@ -8,8 +8,8 @@ class Detail {
   final String speciality;
   final String fees;
   final String respondTime;
-  final Icons star;
-  final Icons time;
+  final Row star;
+  final Icon time;
   final String rating;
   final String aboutDoctor;
   final String doctorBio;

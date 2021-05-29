@@ -161,9 +161,7 @@ class _OtpRecievePageState extends State<OtpRecievePage> {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 20),
                                   child: TextButton(
-                                    onPressed: (){
-                                      Navigator.pop(context);
-                                    },
+                                    onPressed: (){},
                                     child: Text(
                                       'Resend',
                                       style: TextStyle(

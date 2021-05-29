@@ -1,7 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:teletherapy/signin_page.dart';
+
+import 'home_page.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -318,66 +319,45 @@ class _SignUpPageState extends State<SignUpPage> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 8),
-                                  child: Text('I agree With all terms and conditions '),
+                                  child: Text(
+                                      'I agree With all terms and conditions '),
                                 ),
                               ],
                             ),
                             SizedBox(
                               height: 30,
                             ),
-                            Container(
-                              height: 50,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(10),
-                                ),
-                                color: Color(0xffBE5FF9),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 12),
-                                child: Text(
-                                  'Sign In',
-                                  style: TextStyle(
-                                    fontSize: 22,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.white,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => HomePage(),
                                   ),
-                                  textAlign: TextAlign.center,
+                                );
+                              },
+                              child: Container(
+                                height: 50,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(10),
+                                  ),
+                                  color: Color(0xffBE5FF9),
                                 ),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 50),
-                                  child: Text('Already have an account ?'),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 20),
-                                  child: InkWell(
-                                    onTap: () {
-                                      Navigator.pop(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => SignInPage(),
-                                        ),
-                                      );
-                                    },
-                                    child: TextButton(
-                                      onPressed: (){},
-                                      child: Text(
-                                        'Sign In',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color(0xffBE5FF9),
-                                        ),
-                                      ),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 12),
+                                  child: Text(
+                                    'Sign up',
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
                                     ),
+                                    textAlign: TextAlign.center,
                                   ),
                                 ),
-                              ],
+                              ),
                             ),
                           ],
                         ),

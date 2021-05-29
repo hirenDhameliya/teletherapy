@@ -19,7 +19,6 @@ class _SignInPageState extends State<SignInPage> {
   @override
 
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Stack(
@@ -249,8 +248,8 @@ class _SignInPageState extends State<SignInPage> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left:65),
-                                  child: InkWell(
-                                    onTap: (){
+                                  child: TextButton(
+                                    onPressed: (){
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -258,10 +257,7 @@ class _SignInPageState extends State<SignInPage> {
                                         ),
                                       );
                                     },
-                                    child: TextButton(
-                                      onPressed: (){},
-                                      child: Text('Forgot Password?'),
-                                    ),
+                                    child: Text('Forgot Password?'),
                                   ),
                                 ),
                               ],
@@ -306,8 +302,8 @@ class _SignInPageState extends State<SignInPage> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left:20),
-                                  child: InkWell(
-                                    onTap: (){
+                                  child: TextButton(
+                                    onPressed: (){
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -315,15 +311,12 @@ class _SignInPageState extends State<SignInPage> {
                                         ),
                                       );
                                     },
-                                    child: TextButton(
-                                      onPressed: (){},
-                                      child: Text(
-                                        'Sign Up',style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xffBE5FF9),
-                                      ),
-                                      ),
+                                    child: Text(
+                                      'Sign Up',style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xffBE5FF9),
+                                    ),
                                     ),
                                   ),
                                 ),
