@@ -183,7 +183,7 @@ class CommonWidget {
     );
   }
   //
-  // static Widget Doctorsinfo({Detail Doctorsinfo}) {
+  // static Widget Doctorsinfo({Detail doctorinfo}) {
   //   return
   // }
 }

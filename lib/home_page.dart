@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 import 'package:teletherapy/common_widget.dart';
+import 'package:teletherapy/doctor_info.dart';
 import 'package:teletherapy/model.dart';
 import 'package:teletherapy/list_page.dart';
 import 'package:teletherapy/country_picker.dart';
@@ -196,6 +197,14 @@ class _HomePageState extends State<HomePage> {
                       Column(
                         children: therapistlist.map((Detail therapist) {
                           return GestureDetector(
+                            onTap: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => DoctorInfo(),
+                                ),
+                              );
+                            },
                             child: CommonWidget.therapist(therapist: therapist),
                           );
                         }).toList(),

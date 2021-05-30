@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teletherapy/doctor_info.dart';
 import 'package:teletherapy/model.dart';
 
 final categories1 = [
@@ -303,5 +304,80 @@ final therapist = [
     time: Icon(
       Icons.access_time_outlined,
     ),
+  ),
+];
+
+final doctorinfo = [
+  Detail(
+    image: 'assets/image/doctorf.png',
+    name: 'Dr.mishell wood',
+    rating: '4.4',
+    degree: 'MBBS, Bcs(helth), MCH',
+    speciality: 'Phd, Cardiaology',
+    aboutDoctor: '',
+    address: '',
+    experience: '',
+    medicalId: '',
+    doctorBio: '',
+  ),
+  Detail(
+    image: 'assets/image/doctorf.png',
+    name: 'Dr.mishell wood',
+    rating: '4.4',
+    degree: 'MBBS, Bcs(helth), MCH',
+    speciality: 'Phd, Cardiaology',
+    aboutDoctor: '',
+    address: '',
+    experience: '',
+    medicalId: '',
+    doctorBio: '',
+  ),
+  Detail(
+    image: 'assets/image/doctorf.png',
+    name: 'Dr.mishell wood',
+    rating: '4.4',
+    degree: 'MBBS, Bcs(helth), MCH',
+    speciality: 'Phd, Cardiaology',
+    aboutDoctor: '',
+    address: '',
+    experience: '',
+    medicalId: '',
+    doctorBio: '',
+  ),
+  Detail(
+    image: 'assets/image/doctorf.png',
+    name: 'Dr.mishell wood',
+    rating: '4.4',
+    degree: 'MBBS, Bcs(helth), MCH',
+    speciality: 'Phd, Cardiaology',
+    aboutDoctor: '',
+    address: '',
+    experience: '',
+    medicalId: '',
+    doctorBio: '',
+  ),
+  Detail(
+    image: 'assets/image/doctorf.png',
+    name: 'Dr.mishell wood',
+    rating: '4.4',
+    degree: 'MBBS, Bcs(helth), MCH',
+    speciality: 'Phd, Cardiaology',
+    aboutDoctor: '',
+    address: '',
+    experience: '',
+    medicalId: '',
+    doctorBio: '',
+  ),
+  Detail(
+    image: 'assets/image/doctorf.png',
+    name: 'Dr.mishell wood',
+    rating: '4.4',
+    degree: 'MBBS, Bcs(helth), MCH',
+    speciality: 'Phd, Cardiaology',
+    aboutDoctor: '',
+    address: '',
+    experience: '',
+    medicalId: '',
+    doctorBio: '',
   ),
 ];

@@ -40,6 +40,7 @@ dependencies:
 #  firebase_core: ^1.1.1
 #  firebase_auth: ^1.1.4
   material_floating_search_bar: ^0.3.4
+  flutter_rating_bar: ^4.0.0
 
 
 dev_dependencies:
@@ -55,7 +56,7 @@ flutter_native_splash:
   android_gravity: cover
   ios_content_mode: cover
   image: "assets/image/splash.png"
-#  color: "#42a5f5"
+  #  color: "#42a5f5"
   #background_image: "assets/background.png"
 
 # For information on the generic Dart part of this file, see the
