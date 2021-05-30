@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:teletherapy/model.dart';
 
+import 'model.dart';
+
 class CommonWidget {
   static Widget categories({
     Detail categorieslist,
@@ -78,10 +80,13 @@ class CommonWidget {
                     height: 75,
                     width: 75,
                     decoration: BoxDecoration(
-                      boxShadow: [BoxShadow( color: Colors.grey.shade200,
-                        blurRadius:5,
-                        spreadRadius:2,
-                        )],
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade200,
+                          blurRadius: 5,
+                          spreadRadius: 2,
+                        )
+                      ],
                       shape: BoxShape.circle,
                       image: DecorationImage(
                         image: AssetImage(therapist.image),
@@ -99,7 +104,7 @@ class CommonWidget {
                         child: Text(
                           "${therapist.name}",
                           style: TextStyle(
-                            fontSize:18,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -166,7 +171,7 @@ class CommonWidget {
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w600,
-                      color: Colors.green[600],
+                      color: Colors.redAccent,
                     ),
                   ),
                 ),
@@ -177,4 +182,8 @@ class CommonWidget {
       ),
     );
   }
+  //
+  // static Widget Doctorsinfo({Detail Doctorsinfo}) {
+  //   return
+  // }
 }

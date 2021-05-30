@@ -62,7 +62,7 @@ final therapist = [
     image: 'assets/image/doctora.png',
     name: 'Dr. steven carter',
     rating: '4.4',
-    degree: 'MBBS,Bcs(helth),DDv,MPH',
+    degree: 'MBBS, Bcs(helth), DDv, MPH',
     speciality: 'skin,VD & hairTransplant',
     respondTime: 'Respond within 2h',
     fees: '\$300',
@@ -101,12 +101,12 @@ final therapist = [
   ),
   Detail(
     image: 'assets/image/doctorb.png',
-    name: 'Dr.',
+    name: 'Dr.josh hazalwood',
     rating: '4.4',
-    degree: 'MBBS,Bcs(helth),DDv,MPH',
-    speciality: 'skin,VD & hairTransplant',
-    respondTime: 'Respond within 2h',
-    fees: '\$300',
+    degree: 'BDS, PGT, ms resident',
+    speciality: 'dental surgery(japan)',
+    respondTime: 'Respond within 4h',
+    fees: '\$230',
     star: Row(
       children: [
         Icon(
@@ -142,12 +142,12 @@ final therapist = [
   ),
   Detail(
     image: 'assets/image/doctorc.png',
-    name: 'Dr.Hiren Dhameliya',
+    name: 'Dr.randip guleria',
     rating: '4.4',
-    degree: 'MBBS,Bcs(helth),DDv,MPH',
-    speciality: 'skin,VD & hairTransplant',
-    respondTime: 'Respond within 2h',
-    fees: '\$300',
+    degree: 'MBBS, Bcs(helth), DDv, MPH',
+    speciality: 'Covid -19 Specialist',
+    respondTime: 'Respond within 3h',
+    fees: '\$350',
     star: Row(
       children: [
         Icon(
@@ -183,11 +183,11 @@ final therapist = [
   ),
   Detail(
     image: 'assets/image/doctord.png',
-    name: 'Dr.Hiren Dhameliya',
+    name: 'Dr.jason mark',
     rating: '4.4',
-    degree: 'MBBS,Bcs(helth),DDv,MPH',
-    speciality: 'skin,VD & hairTransplant',
-    respondTime: 'Respond within 2h',
+    degree: 'MBBS, MD, (UK)',
+    speciality: 'Phd, piediatrics',
+    respondTime: 'Respond within 1h',
     fees: '\$300',
     star: Row(
       children: [
@@ -224,12 +224,12 @@ final therapist = [
   ),
   Detail(
     image: 'assets/image/doctore.png',
-    name: 'Dr.Hiren Dhameliya',
+    name: 'Dr.rancy d paul',
     rating: '4.4',
-    degree: 'MBBS,Bcs(helth),DDv,MPH',
-    speciality: 'skin,VD & hairTransplant',
+    degree: 'MBBS, DDv, MPH',
+    speciality: 'Eye Specialist',
     respondTime: 'Respond within 2h',
-    fees: '\$300',
+    fees: '\$310',
     star: Row(
       children: [
         Icon(
@@ -265,11 +265,11 @@ final therapist = [
   ),
   Detail(
     image: 'assets/image/doctorf.png',
-    name: 'Dr.Hiren Dhameliya',
+    name: 'Dr.mishell wood',
     rating: '4.4',
-    degree: 'MBBS,Bcs(helth),DDv,MPH',
-    speciality: 'skin,VD & hairTransplant',
-    respondTime: 'Respond within 2h',
+    degree: 'MBBS, Bcs(helth), MCH',
+    speciality: 'Phd, Cardiaology',
+    respondTime: 'Respond within 4h',
     fees: '\$300',
     star: Row(
       children: [

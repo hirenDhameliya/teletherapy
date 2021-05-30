@@ -6,7 +6,6 @@ import 'package:teletherapy/common_widget.dart';
 import 'package:teletherapy/model.dart';
 import 'package:teletherapy/list_page.dart';
 import 'package:teletherapy/country_picker.dart';
-
 import 'common_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -196,7 +195,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Column(
                         children: therapistlist.map((Detail therapist) {
-                          return CommonWidget.therapist(therapist: therapist);
+                          return GestureDetector(
+                            child: CommonWidget.therapist(therapist: therapist),
+                          );
                         }).toList(),
                       ),
                     ],
