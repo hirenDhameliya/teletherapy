@@ -16,8 +16,8 @@ class _SignInPageState extends State<SignInPage> {
   GlobalKey<FormState> _form = GlobalKey<FormState>();
   bool _hidePass = true;
   bool _selected = false;
-  @override
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
@@ -47,6 +47,9 @@ class _SignInPageState extends State<SignInPage> {
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white),
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Text(
                             'Find Your Favourite Therapist',
                             style: TextStyle(
@@ -60,7 +63,7 @@ class _SignInPageState extends State<SignInPage> {
                     fit: FlexFit.loose,
                   ),
                   SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
                   Flexible(
                     fit: FlexFit.loose,
@@ -85,7 +88,7 @@ class _SignInPageState extends State<SignInPage> {
                                     'WelCome Back',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 30,
+                                      fontSize: 25,
                                     ),
                                   ),
                                 ),
@@ -100,7 +103,7 @@ class _SignInPageState extends State<SignInPage> {
                                     'Sign In your account',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w300,
-                                      fontSize: 18,
+                                      fontSize: 15,
                                       color: Colors.black54,
                                     ),
                                   ),
@@ -108,7 +111,7 @@ class _SignInPageState extends State<SignInPage> {
                               ],
                             ),
                             SizedBox(
-                              height: 22,
+                              height: 15,
                             ),
                             Form(
                               key: _form,
@@ -226,17 +229,16 @@ class _SignInPageState extends State<SignInPage> {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: _selected
-                                          ?  Colors.deepPurple
+                                          ? Colors.deepPurple
                                           : Colors.white,
-                                      border: Border.all(
-                                           color: Colors.black45),
+                                      border: Border.all(color: Colors.black45),
                                     ),
                                     child: Padding(
                                         padding: const EdgeInsets.all(3.0),
                                         child: _selected
                                             ? Icon(
                                                 Icons.check,
-                                                size:16,
+                                                size:15,
                                                 color: Colors.white,
                                               )
                                             : Container()),
@@ -247,23 +249,24 @@ class _SignInPageState extends State<SignInPage> {
                                   child: Text('Remember me'),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left:65),
+                                  padding: const EdgeInsets.only(left:80),
                                   child: TextButton(
-                                    onPressed: (){
+                                    onPressed: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => ForGotPassword(),
+                                          builder: (context) =>
+                                              ForGotPassword(),
                                         ),
                                       );
                                     },
-                                    child: Text('Forgot Password?'),
+                                    child: Text('Forgot Password?',style:TextStyle(fontSize: 12),),
                                   ),
                                 ),
                               ],
                             ),
                             InkWell(
-                              onTap: (){
+                              onTap: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -272,7 +275,7 @@ class _SignInPageState extends State<SignInPage> {
                                 );
                               },
                               child: Container(
-                                height: 50,
+                                height:45,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
@@ -285,7 +288,7 @@ class _SignInPageState extends State<SignInPage> {
                                   child: Text(
                                     'Sign In',
                                     style: TextStyle(
-                                      fontSize: 22,
+                                      fontSize:18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -301,9 +304,9 @@ class _SignInPageState extends State<SignInPage> {
                                   child: Text('Don\'t have an account ?'),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left:20),
+                                  padding: const EdgeInsets.only(left:5      ),
                                   child: TextButton(
-                                    onPressed: (){
+                                    onPressed: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -312,11 +315,12 @@ class _SignInPageState extends State<SignInPage> {
                                       );
                                     },
                                     child: Text(
-                                      'Sign Up',style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Color(0xffBE5FF9),
-                                    ),
+                                      'Sign Up',
+                                      style: TextStyle(
+                                        fontSize:14,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0xffBE5FF9),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -329,12 +333,13 @@ class _SignInPageState extends State<SignInPage> {
                               children: [
                                 Expanded(
                                   child: Container(
-                                      margin: const EdgeInsets.only(
-                                          left: 10.0, right: 15.0),
-                                      child: Divider(
-                                        color: Colors.black,
-                                        height: 35,
-                                      )),
+                                    margin: const EdgeInsets.only(
+                                        left: 10.0, right: 15.0),
+                                    child: Divider(
+                                      color: Colors.black,
+                                      height: 35,
+                                    ),
+                                  ),
                                 ),
                                 Text("Or Continue with"),
                                 Expanded(

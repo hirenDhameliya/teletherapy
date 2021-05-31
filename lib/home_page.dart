@@ -197,7 +197,7 @@ class _HomePageState extends State<HomePage> {
                       Column(
                         children: therapistlist.map((Detail therapist) {
                           return GestureDetector(
-                            onTap: (){
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(

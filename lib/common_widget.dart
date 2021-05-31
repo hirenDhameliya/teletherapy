@@ -182,8 +182,280 @@ class CommonWidget {
       ),
     );
   }
-  //
-  // static Widget Doctorsinfo({Detail doctorinfo}) {
-  //   return
-  // }
+
+  static Widget Doctorsinfo({Detail doctorinfo}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SafeArea(
+              child: Stack(
+                children: [
+                  Container(
+                    height: 130,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(12),
+                      ),
+                      image: DecorationImage(
+                        image: AssetImage('assets/image/bg.png'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 70),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 120,
+                          width: 120,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image:
+                              AssetImage('assets/image/doctora.png'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Text(
+              'Dr.mishell wood',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            Text(
+              'Phd, Cardiaology',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+                color: Colors.deepPurple,
+              ),
+            ),
+            Text(
+              'MBBS, Bcs(helth), MCH',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            Divider(
+              thickness: 2,
+              color: Colors.grey.shade200,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'About Therapist',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey.shade700,
+                        ),
+                      ),
+                      Text(
+                        'abcd',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black45,
+                        ),
+                      ),
+                      Text(
+                        'Other Info',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey.shade700,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset('assets/image/experience.png'),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Text('Experience'),
+                                Text('Experience'),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          Image.asset('assets/image/verifie.png'),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Text('Verified Doctor License'),
+                                Text('Verified Doctor License'),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          Image.asset('assets/image/expert.png'),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Text('Area Of Expertise '),
+                                Text('Area Of Expertise '),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          Image.asset('assets/image/hospital.png'),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                Text('Hospital Name & Address'),
+                                Text('Hospital Name & Address'),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Divider(
+                        thickness: 2,
+                        color: Colors.grey.shade200,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Text(
+              'Rating & Review',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+                color: Colors.black,
+              ),
+            ),
+            Text('abc'),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 5),
+              // child: therapist.star,
+            ),
+            Text('abc'),
+            Container(
+              height: 45,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+                color: Color(0xffBE5FF9),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: Text(
+                  'Write Review',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Divider(
+              thickness: 2,
+              color: Colors.grey.shade300,
+            ),
+            Row(
+              children: [
+                Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage('assets/image/doctora.png'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                Column(
+                  children: [
+                    Text('abc'),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5),
+                      // child: therapist.star,
+                    ),
+                    Text('abc'),
+                  ],
+                ),
+              ],
+            ),
+            Text('review'),
+            Container(
+              height: 45,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+                color: Color(0xffBE5FF9),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: Text(
+                  'Book an Appointment',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );}
 }

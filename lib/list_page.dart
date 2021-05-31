@@ -315,10 +315,42 @@ final doctorinfo = [
     degree: 'MBBS, Bcs(helth), MCH',
     speciality: 'Phd, Cardiaology',
     aboutDoctor: '',
-    address: '',
-    experience: '',
-    medicalId: '',
-    doctorBio: '',
+    address: 'AMITA Health Resurrection, Medical Center, Chicago',
+    experience: '10 year experience',
+    medicalId: 'Medical registration id :5588',
+    doctorBio: 'Phd, Cardiaology',
+    star: Row(
+      children: [
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star_border,
+          color: Colors.amber,
+          size: 20,
+        ),
+      ],
+    ),
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
   ),
   Detail(
     image: 'assets/image/doctorf.png',
@@ -327,10 +359,42 @@ final doctorinfo = [
     degree: 'MBBS, Bcs(helth), MCH',
     speciality: 'Phd, Cardiaology',
     aboutDoctor: '',
-    address: '',
-    experience: '',
-    medicalId: '',
+    address: 'Alamance Regional Medical Center',
+    experience: '7 years experience',
+    medicalId: 'Medical registration id :5432',
     doctorBio: '',
+   star:Row(
+      children: [
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star_border,
+          color: Colors.amber,
+          size: 20,
+        ),
+      ],
+    ),
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
   ),
   Detail(
     image: 'assets/image/doctorf.png',
@@ -339,10 +403,42 @@ final doctorinfo = [
     degree: 'MBBS, Bcs(helth), MCH',
     speciality: 'Phd, Cardiaology',
     aboutDoctor: '',
-    address: '',
-    experience: '',
-    medicalId: '',
+    address: 'Baylor Scott & White All Saints Medical Center - Fort Worth',
+    experience: '8 years experience',
+    medicalId: 'Medical registration id :3258',
     doctorBio: '',
+    star: Row(
+      children: [
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star_border,
+          color: Colors.amber,
+          size: 20,
+        ),
+      ],
+    ),
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
   ),
   Detail(
     image: 'assets/image/doctorf.png',
@@ -351,10 +447,43 @@ final doctorinfo = [
     degree: 'MBBS, Bcs(helth), MCH',
     speciality: 'Phd, Cardiaology',
     aboutDoctor: '',
-    address: '',
-    experience: '',
-    medicalId: '',
+    address: 'MedStar Franklin Square Medical Center',
+    experience: '5 years experience',
+    medicalId: 'Medical registration id :1188',
     doctorBio: '',
+    star: Row(
+      children: [
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star_border,
+          color: Colors.amber,
+          size: 20,
+        ),
+      ],
+    ),
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
+
   ),
   Detail(
     image: 'assets/image/doctorf.png',
@@ -363,10 +492,42 @@ final doctorinfo = [
     degree: 'MBBS, Bcs(helth), MCH',
     speciality: 'Phd, Cardiaology',
     aboutDoctor: '',
-    address: '',
-    experience: '',
-    medicalId: '',
+    address: 'Methodist Specialty & Transplant Hospital',
+    experience: '12 years experience',
+    medicalId: 'Medical registration id :558',
     doctorBio: '',
+    star:Row(
+      children: [
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star_border,
+          color: Colors.amber,
+          size: 20,
+        ),
+      ],
+    ),
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
   ),
   Detail(
     image: 'assets/image/doctorf.png',
@@ -375,9 +536,41 @@ final doctorinfo = [
     degree: 'MBBS, Bcs(helth), MCH',
     speciality: 'Phd, Cardiaology',
     aboutDoctor: '',
-    address: '',
-    experience: '',
-    medicalId: '',
+    address: 'Newton-Wellesley Hospital,new york',
+    experience: '7 years experience',
+    medicalId: 'Medical registration id :5998',
     doctorBio: '',
+    star: Row(
+      children: [
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.amber,
+          size: 20,
+        ),
+        Icon(
+          Icons.star_border,
+          color: Colors.amber,
+          size: 20,
+        ),
+      ],
+    ),
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
   ),
 ];
