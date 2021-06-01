@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:teletherapy/doctor_info.dart';
 import 'package:teletherapy/model.dart';
 
 final categories1 = [
@@ -68,6 +67,7 @@ final therapist = [
     respondTime: 'Respond within 2h',
     fees: '\$300',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -109,6 +109,7 @@ final therapist = [
     respondTime: 'Respond within 4h',
     fees: '\$230',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -150,6 +151,7 @@ final therapist = [
     respondTime: 'Respond within 3h',
     fees: '\$350',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -191,6 +193,7 @@ final therapist = [
     respondTime: 'Respond within 1h',
     fees: '\$300',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -232,6 +235,7 @@ final therapist = [
     respondTime: 'Respond within 2h',
     fees: '\$310',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -273,6 +277,7 @@ final therapist = [
     respondTime: 'Respond within 4h',
     fees: '\$300',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -307,19 +312,25 @@ final therapist = [
   ),
 ];
 
-final doctorinfo = [
+final doctorinfo1 = [
   Detail(
-    image: 'assets/image/doctorf.png',
-    name: 'Dr.mishell wood',
+    image: 'assets/image/doctora.png',
+    name: 'Dr. steven carter',
     rating: '4.4',
-    degree: 'MBBS, Bcs(helth), MCH',
-    speciality: 'Phd, Cardiaology',
-    aboutDoctor: '',
-    address: 'AMITA Health Resurrection, Medical Center, Chicago',
+    degree: 'MBBS, Bcs(helth), DDv, MPH',
+    speciality: 'skin,VD & hairTransplant',
+    aboutDoctor:
+        'Dr. steven carter is therapist who has\ncomprehensive expertisein the fields of an\n'
+        'renal medicine and internal medicine this\n '
+        'while dr specializes in dialysys and wild\n'
+        ' critical care nephrology.',
+    address: 'AMITA Health Resurrection\n,'
+        'Medical Center, Chicago',
     experience: '10 year experience',
     medicalId: 'Medical registration id :5588',
-    doctorBio: 'Phd, Cardiaology',
+    doctorBio: 'skin,VD & hairTransplant',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -348,22 +359,32 @@ final doctorinfo = [
         ),
       ],
     ),
-    time: Icon(
-      Icons.access_time_outlined,
-    ),
+    reviewimage: 'assets/image/reviewa.png',
+    reviewname: 'david milne',
+    reviewdate: '30 jan 2021',
+    review:
+        'my hair falling problem solved\nbecause of dr.carters hair transplant\n',
   ),
+];
+
+final doctorinfo2 = [
   Detail(
-    image: 'assets/image/doctorf.png',
-    name: 'Dr.mishell wood',
+    image: 'assets/image/doctorb.png',
+    name: 'Dr.josh hazalwood',
     rating: '4.4',
-    degree: 'MBBS, Bcs(helth), MCH',
-    speciality: 'Phd, Cardiaology',
-    aboutDoctor: '',
+    degree: 'BDS, PGT, ms resident',
+    speciality: 'dental surgery(japan)',
+    aboutDoctor:
+        'Dr.josh hazalwood is therapist who has\ncomprehensive expertisein the fields of an\n'
+            'renal medicine and internal medicine this\n '
+            'while dr specializes in dialysys and wild\n'
+            ' critical care nephrology.',
     address: 'Alamance Regional Medical Center',
     experience: '7 years experience',
     medicalId: 'Medical registration id :5432',
-    doctorBio: '',
-   star:Row(
+    doctorBio: 'dental surgery(japan)',
+    star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -392,22 +413,30 @@ final doctorinfo = [
         ),
       ],
     ),
-    time: Icon(
-      Icons.access_time_outlined,
-    ),
+    reviewimage: 'assets/image/reviewb.png',
+    reviewname: 'joseph phillipe',
+    reviewdate: '15 feb 2021',
+    review: 'happy with dr.josh treatment\nthank you dr.josh',
   ),
+];
+final doctorinfo3 = [
   Detail(
-    image: 'assets/image/doctorf.png',
-    name: 'Dr.mishell wood',
+    image: 'assets/image/doctorc.png',
+    name: 'Dr.randip guleria',
     rating: '4.4',
     degree: 'MBBS, Bcs(helth), MCH',
-    speciality: 'Phd, Cardiaology',
-    aboutDoctor: '',
+    speciality: 'Covid -19 Specialist',
+    aboutDoctor:
+        'Dr.randip guleria is therapist who has\ncomprehensive expertisein the fields of an\n'
+            'renal medicine and internal medicine this\n '
+            'while dr specializes in dialysys and wild\n'
+            ' critical care nephrology.',
     address: 'Baylor Scott & White All Saints Medical Center - Fort Worth',
     experience: '8 years experience',
     medicalId: 'Medical registration id :3258',
-    doctorBio: '',
+    doctorBio: 'Covid -19 Specialist',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -436,22 +465,32 @@ final doctorinfo = [
         ),
       ],
     ),
-    time: Icon(
-      Icons.access_time_outlined,
-    ),
+    reviewimage: 'assets/image/reviewa.png',
+    reviewname: 'adama gilley',
+    reviewdate: '11 may 2021',
+    review:
+        'recently i am covid positive\ni admit in hospital and\nafter successfull treatment\ni fell happy 😊 ',
   ),
+];
+
+final doctorinfo4 = [
   Detail(
-    image: 'assets/image/doctorf.png',
-    name: 'Dr.mishell wood',
+    image: 'assets/image/doctord.png',
+    name: 'Dr.jason mark',
     rating: '4.4',
     degree: 'MBBS, Bcs(helth), MCH',
-    speciality: 'Phd, Cardiaology',
-    aboutDoctor: '',
+    speciality: 'MBBS, MD, (UK)',
+    aboutDoctor:
+        'Dr.jason mark is therapist who has\ncomprehensive expertisein the fields of an\n'
+            'renal medicine and internal medicine this\n '
+            'while dr specializes in dialysys and wild\n'
+            ' critical care nephrology.',
     address: 'MedStar Franklin Square Medical Center',
     experience: '5 years experience',
     medicalId: 'Medical registration id :1188',
-    doctorBio: '',
+    doctorBio: 'Phd, piediatrics',
     star: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           Icons.star,
@@ -480,97 +519,115 @@ final doctorinfo = [
         ),
       ],
     ),
-    time: Icon(
-      Icons.access_time_outlined,
-    ),
+    reviewimage: 'assets/image/reviewb.png',
+    reviewname: 'hope shai',
+    reviewdate: '25 feb 2020',
+    review:
+        'my son is suffering from skin itching problem\ndr.marks advice help me\nthank you dr.mark',
+  ),
+];
 
-  ),
+final doctorinfo5 = [
   Detail(
-    image: 'assets/image/doctorf.png',
-    name: 'Dr.mishell wood',
-    rating: '4.4',
-    degree: 'MBBS, Bcs(helth), MCH',
-    speciality: 'Phd, Cardiaology',
-    aboutDoctor: '',
-    address: 'Methodist Specialty & Transplant Hospital',
-    experience: '12 years experience',
-    medicalId: 'Medical registration id :558',
-    doctorBio: '',
-    star:Row(
-      children: [
-        Icon(
-          Icons.star,
-          color: Colors.amber,
-          size: 20,
-        ),
-        Icon(
-          Icons.star,
-          color: Colors.amber,
-          size: 20,
-        ),
-        Icon(
-          Icons.star,
-          color: Colors.amber,
-          size: 20,
-        ),
-        Icon(
-          Icons.star,
-          color: Colors.amber,
-          size: 20,
-        ),
-        Icon(
-          Icons.star_border,
-          color: Colors.amber,
-          size: 20,
-        ),
-      ],
-    ),
-    time: Icon(
-      Icons.access_time_outlined,
-    ),
-  ),
+      image: 'assets/image/doctore.png',
+      name: 'Dr.rancy d paul',
+      rating: '4.4',
+      degree: 'MBBS, Bcs(helth), MCH',
+      speciality: 'Eye Specialist',
+      aboutDoctor:
+          'Dr.rancy d paul is therapist who has\ncomprehensive expertisein the fields of an\n'
+              'renal medicine and internal medicine this\n '
+              'while dr specializes in dialysys and wild\n'
+              ' critical care nephrology.',
+      address: 'Methodist Specialty & Transplant Hospital',
+      experience: '12 years experience',
+      medicalId: 'Medical registration id :558',
+      doctorBio: 'Eye Specialist',
+      star: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.star,
+            color: Colors.amber,
+            size: 20,
+          ),
+          Icon(
+            Icons.star,
+            color: Colors.amber,
+            size: 20,
+          ),
+          Icon(
+            Icons.star,
+            color: Colors.amber,
+            size: 20,
+          ),
+          Icon(
+            Icons.star,
+            color: Colors.amber,
+            size: 20,
+          ),
+          Icon(
+            Icons.star_border,
+            color: Colors.amber,
+            size: 20,
+          ),
+        ],
+      ),
+      reviewimage: 'assets/image/reviewa.png',
+      reviewname: 'keiron litchy',
+      reviewdate: '30 jan 2021',
+      review:
+          'i have eye burning problem since last 1 month\ndr.rancy d paul advice help me\n now my problem is solve\n thank you dr.paul'),
+];
+final doctorinfo6 = [
   Detail(
-    image: 'assets/image/doctorf.png',
-    name: 'Dr.mishell wood',
-    rating: '4.4',
-    degree: 'MBBS, Bcs(helth), MCH',
-    speciality: 'Phd, Cardiaology',
-    aboutDoctor: '',
-    address: 'Newton-Wellesley Hospital,new york',
-    experience: '7 years experience',
-    medicalId: 'Medical registration id :5998',
-    doctorBio: '',
-    star: Row(
-      children: [
-        Icon(
-          Icons.star,
-          color: Colors.amber,
-          size: 20,
-        ),
-        Icon(
-          Icons.star,
-          color: Colors.amber,
-          size: 20,
-        ),
-        Icon(
-          Icons.star,
-          color: Colors.amber,
-          size: 20,
-        ),
-        Icon(
-          Icons.star,
-          color: Colors.amber,
-          size: 20,
-        ),
-        Icon(
-          Icons.star_border,
-          color: Colors.amber,
-          size: 20,
-        ),
-      ],
-    ),
-    time: Icon(
-      Icons.access_time_outlined,
-    ),
-  ),
+      image: 'assets/image/doctorf.png',
+      name: 'Dr.mishell wood',
+      rating: '4.4',
+      degree: 'MBBS, Bcs(helth), MCH',
+      speciality: 'Phd, Cardiaology',
+      aboutDoctor:
+          'dr.mishell wood is therapist who has\ncomprehensive expertisein the fields of an\n'
+              'renal medicine and internal medicine this\n '
+              'while dr specializes in dialysys and wild\n'
+              ' critical care nephrology.',
+      address: 'Newton-Wellesley Hospital,new york',
+      experience: '7 years experience',
+      medicalId: 'Medical registration id :5998',
+      doctorBio: 'Phd, Cardiaology',
+      star: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.star,
+            color: Colors.amber,
+            size: 20,
+          ),
+          Icon(
+            Icons.star,
+            color: Colors.amber,
+            size: 20,
+          ),
+          Icon(
+            Icons.star,
+            color: Colors.amber,
+            size: 20,
+          ),
+          Icon(
+            Icons.star,
+            color: Colors.amber,
+            size: 20,
+          ),
+          Icon(
+            Icons.star_border,
+            color: Colors.amber,
+            size: 20,
+          ),
+        ],
+      ),
+      reviewimage: 'assets/image/reviewb.png',
+      reviewname: 'louren fiaa',
+      reviewdate: '30 march 2021',
+      review:
+          'i has problem releted heart and\nafter surgery i feel happy,thank you dr, mishell.'),
 ];

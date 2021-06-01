@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+
 import 'package:teletherapy/model.dart';
 
 import 'model.dart';
@@ -41,7 +42,10 @@ class CommonWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            Text("${categorieslist.name}"),
+            Text(
+              "${categorieslist.name}",
+              style: TextStyle(fontSize: 12),
+            ),
           ],
         ),
       ),
@@ -183,200 +187,286 @@ class CommonWidget {
     );
   }
 
-  static Widget Doctorsinfo({Detail doctorinfo}) {
+  static Widget doctorsinfo({Detail doctorinfo}) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: SingleChildScrollView(
+      child: SafeArea(
         child: Column(
           children: [
-            SafeArea(
-              child: Stack(
-                children: [
-                  Container(
-                    height: 130,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(12),
-                      ),
-                      image: DecorationImage(
-                        image: AssetImage('assets/image/bg.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 70),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 120,
-                          width: 120,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                              image:
-                              AssetImage('assets/image/doctora.png'),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Text(
-              'Dr.mishell wood',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            Text(
-              'Phd, Cardiaology',
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w400,
-                color: Colors.deepPurple,
-              ),
-            ),
-            Text(
-              'MBBS, Bcs(helth), MCH',
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            Divider(
-              thickness: 2,
-              color: Colors.grey.shade200,
-            ),
-            Row(
+            Stack(
               children: [
+                Container(
+                  height: 130,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                    image: DecorationImage(
+                      image: AssetImage('assets/image/bg.png'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  padding: const EdgeInsets.only(top: 70),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'About Therapist',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.grey.shade700,
+                      Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage(doctorinfo.image),
+                            fit: BoxFit.fill,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'abcd',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.black45,
-                        ),
-                      ),
-                      Text(
-                        'Other Info',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.grey.shade700,
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Image.asset('assets/image/experience.png'),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Column(
-                              children: [
-                                Text('Experience'),
-                                Text('Experience'),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset('assets/image/verifie.png'),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Column(
-                              children: [
-                                Text('Verified Doctor License'),
-                                Text('Verified Doctor License'),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset('assets/image/expert.png'),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Column(
-                              children: [
-                                Text('Area Of Expertise '),
-                                Text('Area Of Expertise '),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset('assets/image/hospital.png'),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Column(
-                              children: [
-                                Text('Hospital Name & Address'),
-                                Text('Hospital Name & Address'),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Divider(
-                        thickness: 2,
-                        color: Colors.grey.shade200,
                       ),
                     ],
                   ),
                 ),
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: Text(
+                "${doctorinfo.name}",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: doctorinfo.star,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: Text(
+                "${doctorinfo.speciality}",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.deepPurple,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: Text(
+                "${doctorinfo.degree}",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
+            Divider(
+              thickness: 1.8,
+              color: Colors.grey.shade300,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'About Therapist',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.grey.shade700,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    "${doctorinfo.aboutDoctor}",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black45,
+                    ),
+                  ),
+                  Divider(
+                    thickness: 1.5,
+                    color: Colors.grey.shade300,
+                  ),
+                  Text(
+                    'Other Info',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey.shade700,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Row(
+                    children: [
+                      Image.asset('assets/image/experience.png'),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Experience',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 7),
+                              child: Text(
+                                "${doctorinfo.experience}",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black45,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 1.5,
+                    color: Colors.grey.shade300,
+                  ),
+                  Row(
+                    children: [
+                      Image.asset('assets/image/verifie.png'),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 7),
+                              child: Text('Verified Doctor License'),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 7),
+                              child: Text(
+                                "${doctorinfo.medicalId}",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black45,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 1.5,
+                    color: Colors.grey.shade300,
+                  ),
+                  Row(
+                    children: [
+                      Image.asset('assets/image/expert.png'),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 7),
+                              child: Text('Area Of Expertise '),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 7),
+                              child: Text(
+                                "${doctorinfo.doctorBio}",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black45,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 1.5,
+                    color: Colors.grey.shade300,
+                  ),
+                  Row(
+                    children: [
+                      Image.asset('assets/image/hospital.png'),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 7),
+                              child: Text('Hospital Name & Address'),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 7),
+                              child: Text(
+                                "${doctorinfo.address}",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black45,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 1.5,
+                    color: Colors.grey.shade300,
+                  ),
+                ],
+              ),
+            ),
             Text(
               'Rating & Review',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 20,
                 fontWeight: FontWeight.w500,
                 color: Colors.black,
               ),
             ),
-            Text('abc'),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 5),
-              // child: therapist.star,
+            SizedBox(
+              height: 10,
             ),
-            Text('abc'),
+            Text(
+              "${doctorinfo.rating}",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w500,
+                color: Colors.black,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            doctorinfo.star,
+            SizedBox(
+              height: 10,
+            ),
             Container(
               height: 45,
               width: double.infinity,
@@ -399,11 +489,8 @@ class CommonWidget {
                 ),
               ),
             ),
-            SizedBox(
-              height: 12,
-            ),
             Divider(
-              thickness: 2,
+              thickness: 1.5,
               color: Colors.grey.shade300,
             ),
             Row(
@@ -414,24 +501,57 @@ class CommonWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                      image: AssetImage('assets/image/doctora.png'),
+                      image: AssetImage(
+                        "${doctorinfo.reviewimage}",
+                      ),
                       fit: BoxFit.fill,
                     ),
                   ),
                 ),
-                Column(
-                  children: [
-                    Text('abc'),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 5),
-                      // child: therapist.star,
+                Padding(
+                  padding: const EdgeInsets.only(left: 22),
+                  child: Column(
+                    children: [
+                      Text(
+                        "${doctorinfo.reviewname}",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
+                        ),
+                      ),
+                      doctorinfo.star,
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 82, bottom: 22),
+                  child: Text(
+                    "${doctorinfo.reviewdate}",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black38,
                     ),
-                    Text('abc'),
-                  ],
+                  ),
                 ),
               ],
             ),
-            Text('review'),
+            Padding(
+              padding: const EdgeInsets.only(right: 65, top: 10),
+              child: Text(
+                "${doctorinfo.review}",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black54,
+                ),
+              ),
+            ),
+            Divider(
+              thickness: 2,
+              color: Colors.grey.shade300,
+            ),
             Container(
               height: 45,
               width: double.infinity,
@@ -457,5 +577,6 @@ class CommonWidget {
           ],
         ),
       ),
-    );}
+    );
+  }
 }

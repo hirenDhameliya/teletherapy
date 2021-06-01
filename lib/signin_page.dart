@@ -127,7 +127,7 @@ class _SignInPageState extends State<SignInPage> {
                                       hintStyle: TextStyle(
                                           color: Colors.black38,
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 17),
+                                          fontSize: 15),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(10)),
@@ -169,7 +169,7 @@ class _SignInPageState extends State<SignInPage> {
                                       hintStyle: TextStyle(
                                           color: Colors.black38,
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 17),
+                                          fontSize: 15),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(10)),

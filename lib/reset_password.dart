@@ -41,6 +41,9 @@ class _ResetasswordState extends State<Resetassword> {
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white),
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Text(
                             'Find Your Favourite Therapist',
                             style: TextStyle(
@@ -76,7 +79,7 @@ class _ResetasswordState extends State<Resetassword> {
                                 'Reset Password',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
-                                  fontSize: 30,
+                                  fontSize:22,
                                 ),
                               ),
                             ),
@@ -89,7 +92,7 @@ class _ResetasswordState extends State<Resetassword> {
                                 'Please enter your password below\nminimum 6 characters with a number\nand letter',
                                 style: TextStyle(
                                   color: Colors.black54,
-                                  fontSize: 18,
+                                  fontSize: 15,
                                 ),
                               ),
                             ),
@@ -108,7 +111,7 @@ class _ResetasswordState extends State<Resetassword> {
                                 hintStyle: TextStyle(
                                     color: Colors.black38,
                                     fontWeight: FontWeight.w600,
-                                    fontSize: 17),
+                                    fontSize: 15),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
@@ -128,6 +131,7 @@ class _ResetasswordState extends State<Resetassword> {
                                         ? Icons.visibility
                                         : Icons.visibility_off,
                                     color: Colors.black45,
+                                    size: 20,
                                   ),
                                   onTap: () {
                                     setState(() {
@@ -151,6 +155,7 @@ class _ResetasswordState extends State<Resetassword> {
                               height: 20,
                             ),
                             TextFormField(
+                              maxLength: 5,
                               keyboardType: TextInputType.number,
                               obscureText: _hidePass,
                               decoration: InputDecoration(
@@ -162,7 +167,7 @@ class _ResetasswordState extends State<Resetassword> {
                                 hintStyle: TextStyle(
                                     color: Colors.black38,
                                     fontWeight: FontWeight.w600,
-                                    fontSize: 17),
+                                    fontSize: 15),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10)),
@@ -182,6 +187,7 @@ class _ResetasswordState extends State<Resetassword> {
                                         ? Icons.visibility
                                         : Icons.visibility_off,
                                     color: Colors.black45,
+                                    size: 20,
                                   ),
                                   onTap: () {
                                     setState(() {
@@ -214,7 +220,7 @@ class _ResetasswordState extends State<Resetassword> {
                                 );
                               },
                               child: Container(
-                                height: 50,
+                                height: 45,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
@@ -223,11 +229,11 @@ class _ResetasswordState extends State<Resetassword> {
                                   color: Color(0xffBE5FF9),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.only(top: 14),
+                                  padding: const EdgeInsets.only(top:12),
                                   child: Text(
                                     'Done',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize:18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),

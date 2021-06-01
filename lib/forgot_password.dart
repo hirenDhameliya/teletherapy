@@ -41,6 +41,9 @@ class _ForGotPasswordState extends State<ForGotPassword> {
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white),
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Text(
                             'Find Your Favourite Therapist',
                             style: TextStyle(
@@ -76,21 +79,18 @@ class _ForGotPasswordState extends State<ForGotPassword> {
                                 'Forgot Password ?',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
-                                  fontSize: 30,
+                                  fontSize:22,
                                 ),
                               ),
                             ),
                             SizedBox(
                               height: 8,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 5),
-                              child: Text(
-                                'Please enter your email address and\nwe will send you 4-digit verification\ncode to reset your password',
-                                style: TextStyle(
-                                  color: Colors.black54,
-                                  fontSize: 18,
-                                ),
+                            Text(
+                              'Please enter your email address and\nwe will send you 4-digit verification\ncode to reset your password',
+                              style: TextStyle(
+                                color: Colors.black54,
+                                fontSize: 15,
                               ),
                             ),
                             SizedBox(
@@ -108,7 +108,7 @@ class _ForGotPasswordState extends State<ForGotPassword> {
                                   hintStyle: TextStyle(
                                       color: Colors.black38,
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 17),
+                                      fontSize: 15),
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(10)),
@@ -149,7 +149,7 @@ class _ForGotPasswordState extends State<ForGotPassword> {
                                 );
                               },
                               child: Container(
-                                height: 50,
+                                height:45,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
@@ -158,11 +158,11 @@ class _ForGotPasswordState extends State<ForGotPassword> {
                                   color: Color(0xffBE5FF9),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.only(top: 14),
+                                  padding: const EdgeInsets.only(top: 12),
                                   child: Text(
                                     'Continue',
                                     style: TextStyle(
-                                      fontSize:20,
+                                      fontSize:18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),

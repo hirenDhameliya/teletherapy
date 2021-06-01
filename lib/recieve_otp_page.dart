@@ -41,6 +41,9 @@ class _OtpRecievePageState extends State<OtpRecievePage> {
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white),
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Text(
                             'Find Your Favourite Therapist',
                             style: TextStyle(
@@ -76,21 +79,18 @@ class _OtpRecievePageState extends State<OtpRecievePage> {
                                 'Enter The Code',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
-                                  fontSize: 30,
+                                  fontSize:22,
                                 ),
                               ),
                             ),
                             SizedBox(
                               height: 8,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 5),
-                              child: Text(
-                                'Please enter 4-digit code send to\nyour verified email account',
-                                style: TextStyle(
-                                  color: Colors.black54,
-                                  fontSize: 18,
-                                ),
+                            Text(
+                              'Please enter 4-digit code send to\nyour verified email account',
+                              style: TextStyle(
+                                color: Colors.black54,
+                                fontSize: 15,
                               ),
                             ),
                             SizedBox(
@@ -101,10 +101,10 @@ class _OtpRecievePageState extends State<OtpRecievePage> {
                               length: 4,
                               width: MediaQuery.of(context).size.width,
                               textFieldAlignment: MainAxisAlignment.spaceEvenly,
-                              fieldWidth: 45,
+                              fieldWidth:40,
                               fieldStyle: FieldStyle.box,
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize:20,
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -125,7 +125,7 @@ class _OtpRecievePageState extends State<OtpRecievePage> {
                                 );
                               },
                               child: Container(
-                                height: 50,
+                                height: 45,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
@@ -134,11 +134,11 @@ class _OtpRecievePageState extends State<OtpRecievePage> {
                                   color: Color(0xffBE5FF9),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.only(top: 14),
+                                  padding: const EdgeInsets.only(top: 12),
                                   child: Text(
                                     'Continue',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize:18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -159,7 +159,7 @@ class _OtpRecievePageState extends State<OtpRecievePage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 20),
+                                  padding: const EdgeInsets.only(left:10),
                                   child: TextButton(
                                     onPressed: (){},
                                     child: Text(

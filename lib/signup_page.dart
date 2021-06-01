@@ -44,6 +44,9 @@ class _SignUpPageState extends State<SignUpPage> {
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white),
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Text(
                             'Find Your Favourite Therapist',
                             style: TextStyle(
@@ -82,7 +85,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                     'Create Account',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 30,
+                                      fontSize:25,
                                     ),
                                   ),
                                 ),
@@ -97,7 +100,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                     'Create a new account',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w300,
-                                      fontSize: 18,
+                                      fontSize:13,
                                       color: Colors.black54,
                                     ),
                                   ),
@@ -121,7 +124,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                       hintStyle: TextStyle(
                                           color: Colors.black38,
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 17),
+                                          fontSize:15),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(10)),
@@ -160,7 +163,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                       hintStyle: TextStyle(
                                           color: Colors.black38,
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 17),
+                                          fontSize: 15),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(10)),
@@ -201,7 +204,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                       hintStyle: TextStyle(
                                           color: Colors.black38,
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 17),
+                                          fontSize: 15),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(10)),
@@ -242,7 +245,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                       hintStyle: TextStyle(
                                           color: Colors.black38,
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 17),
+                                          fontSize: 15),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(10)),
@@ -262,6 +265,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                               ? Icons.visibility
                                               : Icons.visibility_off,
                                           color: Colors.black45,
+                                          size:22,
                                         ),
                                         onTap: () {
                                           setState(() {
@@ -320,7 +324,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 8),
                                   child: Text(
-                                      'I agree With all terms and conditions '),
+                                      'I agree With all terms and conditions ',style: TextStyle(fontSize: 12),),
                                 ),
                               ],
                             ),
@@ -337,7 +341,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 );
                               },
                               child: Container(
-                                height: 50,
+                                height:45,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
@@ -350,7 +354,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   child: Text(
                                     'Sign up',
                                     style: TextStyle(
-                                      fontSize: 22,
+                                      fontSize:18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
