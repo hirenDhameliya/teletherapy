@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       categorieslistdata1 = categories1;
       categorieslistdata2 = categories2;
-      therapistlist = therapist;
+      therapistlist = doctorinfo;
     });
   }
 
@@ -196,16 +196,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Column(
                         children: therapistlist.map((Detail therapist) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => DoctorInfo(),
-                                ),
-                              );
-                            },
-                            child: CommonWidget.therapist(therapist: therapist),
+                          return CommonWidget.therapist(
+                            therapist: therapist,
+                            context: context,
                           );
                         }).toList(),
                       ),

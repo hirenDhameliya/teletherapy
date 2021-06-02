@@ -53,11 +53,11 @@ dev_dependencies:
 flutter_native_splash:
   android: true
   ios: true
-  android_gravity: cover
-  ios_content_mode: cover
+  android_gravity: fill
+  ios_content_mode: center
   image: "assets/image/splash.png"
-  #  color: "#42a5f5"
-  #background_image: "assets/background.png"
+  color: "#42a5f5"
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

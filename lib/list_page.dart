@@ -275,6 +275,9 @@ final therapist = [
     degree: 'MBBS, Bcs(helth), MCH',
     speciality: 'Phd, Cardiaology',
     respondTime: 'Respond within 4h',
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
     fees: '\$300',
     star: Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -306,13 +309,10 @@ final therapist = [
         ),
       ],
     ),
-    time: Icon(
-      Icons.access_time_outlined,
-    ),
   ),
 ];
 
-final doctorinfo1 = [
+final doctorinfo = [
   Detail(
     image: 'assets/image/doctora.png',
     name: 'Dr. steven carter',
@@ -329,6 +329,11 @@ final doctorinfo1 = [
     experience: '10 year experience',
     medicalId: 'Medical registration id :5588',
     doctorBio: 'skin,VD & hairTransplant',
+    fees: '\$300',
+    respondTime: 'Respond within 4h',
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
     star: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -365,9 +370,6 @@ final doctorinfo1 = [
     review:
         'my hair falling problem solved\nbecause of dr.carters hair transplant\n',
   ),
-];
-
-final doctorinfo2 = [
   Detail(
     image: 'assets/image/doctorb.png',
     name: 'Dr.josh hazalwood',
@@ -376,13 +378,18 @@ final doctorinfo2 = [
     speciality: 'dental surgery(japan)',
     aboutDoctor:
         'Dr.josh hazalwood is therapist who has\ncomprehensive expertisein the fields of an\n'
-            'renal medicine and internal medicine this\n '
-            'while dr specializes in dialysys and wild\n'
-            ' critical care nephrology.',
+        'renal medicine and internal medicine this\n '
+        'while dr specializes in dialysys and wild\n'
+        ' critical care nephrology.',
     address: 'Alamance Regional Medical Center',
     experience: '7 years experience',
     medicalId: 'Medical registration id :5432',
     doctorBio: 'dental surgery(japan)',
+    fees: '\$310',
+    respondTime: 'Respond within 4h',
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
     star: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -413,13 +420,11 @@ final doctorinfo2 = [
         ),
       ],
     ),
-    reviewimage: 'assets/image/reviewb.png',
+    reviewimage: 'assets/image/reviewa.png',
     reviewname: 'joseph phillipe',
     reviewdate: '15 feb 2021',
     review: 'happy with dr.josh treatment\nthank you dr.josh',
   ),
-];
-final doctorinfo3 = [
   Detail(
     image: 'assets/image/doctorc.png',
     name: 'Dr.randip guleria',
@@ -428,13 +433,18 @@ final doctorinfo3 = [
     speciality: 'Covid -19 Specialist',
     aboutDoctor:
         'Dr.randip guleria is therapist who has\ncomprehensive expertisein the fields of an\n'
-            'renal medicine and internal medicine this\n '
-            'while dr specializes in dialysys and wild\n'
-            ' critical care nephrology.',
+        'renal medicine and internal medicine this\n '
+        'while dr specializes in dialysys and wild\n'
+        ' critical care nephrology.',
     address: 'Baylor Scott & White All Saints Medical Center - Fort Worth',
     experience: '8 years experience',
     medicalId: 'Medical registration id :3258',
     doctorBio: 'Covid -19 Specialist',
+    fees: '\$350',
+    respondTime: 'Respond within 4h',
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
     star: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -471,9 +481,6 @@ final doctorinfo3 = [
     review:
         'recently i am covid positive\ni admit in hospital and\nafter successfull treatment\ni fell happy 😊 ',
   ),
-];
-
-final doctorinfo4 = [
   Detail(
     image: 'assets/image/doctord.png',
     name: 'Dr.jason mark',
@@ -482,13 +489,18 @@ final doctorinfo4 = [
     speciality: 'MBBS, MD, (UK)',
     aboutDoctor:
         'Dr.jason mark is therapist who has\ncomprehensive expertisein the fields of an\n'
-            'renal medicine and internal medicine this\n '
-            'while dr specializes in dialysys and wild\n'
-            ' critical care nephrology.',
+        'renal medicine and internal medicine this\n '
+        'while dr specializes in dialysys and wild\n'
+        ' critical care nephrology.',
     address: 'MedStar Franklin Square Medical Center',
     experience: '5 years experience',
     medicalId: 'Medical registration id :1188',
     doctorBio: 'Phd, piediatrics',
+    fees: '\$300',
+    respondTime: 'Respond within 4h',
+    time: Icon(
+      Icons.access_time_outlined,
+    ),
     star: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -519,15 +531,12 @@ final doctorinfo4 = [
         ),
       ],
     ),
-    reviewimage: 'assets/image/reviewb.png',
+    reviewimage: 'assets/image/reviewa.png',
     reviewname: 'hope shai',
     reviewdate: '25 feb 2020',
     review:
         'my son is suffering from skin itching problem\ndr.marks advice help me\nthank you dr.mark',
   ),
-];
-
-final doctorinfo5 = [
   Detail(
       image: 'assets/image/doctore.png',
       name: 'Dr.rancy d paul',
@@ -536,13 +545,18 @@ final doctorinfo5 = [
       speciality: 'Eye Specialist',
       aboutDoctor:
           'Dr.rancy d paul is therapist who has\ncomprehensive expertisein the fields of an\n'
-              'renal medicine and internal medicine this\n '
-              'while dr specializes in dialysys and wild\n'
-              ' critical care nephrology.',
+          'renal medicine and internal medicine this\n '
+          'while dr specializes in dialysys and wild\n'
+          ' critical care nephrology.',
       address: 'Methodist Specialty & Transplant Hospital',
       experience: '12 years experience',
       medicalId: 'Medical registration id :558',
       doctorBio: 'Eye Specialist',
+      fees: '\$250',
+      respondTime: 'Respond within 4h',
+      time: Icon(
+        Icons.access_time_outlined,
+      ),
       star: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -578,8 +592,6 @@ final doctorinfo5 = [
       reviewdate: '30 jan 2021',
       review:
           'i have eye burning problem since last 1 month\ndr.rancy d paul advice help me\n now my problem is solve\n thank you dr.paul'),
-];
-final doctorinfo6 = [
   Detail(
       image: 'assets/image/doctorf.png',
       name: 'Dr.mishell wood',
@@ -588,13 +600,18 @@ final doctorinfo6 = [
       speciality: 'Phd, Cardiaology',
       aboutDoctor:
           'dr.mishell wood is therapist who has\ncomprehensive expertisein the fields of an\n'
-              'renal medicine and internal medicine this\n '
-              'while dr specializes in dialysys and wild\n'
-              ' critical care nephrology.',
+          'renal medicine and internal medicine this\n '
+          'while dr specializes in dialysys and wild\n'
+          ' critical care nephrology.',
       address: 'Newton-Wellesley Hospital,new york',
       experience: '7 years experience',
       medicalId: 'Medical registration id :5998',
       doctorBio: 'Phd, Cardiaology',
+      fees: '\$300',
+      respondTime: 'Respond within 4h',
+      time: Icon(
+        Icons.access_time_outlined,
+      ),
       star: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -625,7 +642,7 @@ final doctorinfo6 = [
           ),
         ],
       ),
-      reviewimage: 'assets/image/reviewb.png',
+      reviewimage: 'assets/image/reviewa.png',
       reviewname: 'louren fiaa',
       reviewdate: '30 march 2021',
       review:

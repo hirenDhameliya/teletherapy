@@ -21,6 +21,7 @@ class Detail {
   final String reviewdate;
   final String review;
 
+
   Detail( {
     this.review,
     this.id,
@@ -43,3 +44,14 @@ class Detail {
     this.reviewdate,
   });
 }
+
+
+
+
+// gradient: LinearGradient(
+// begin: Alignment.topLeft,
+// end: Alignment.bottomRight,
+// colors: [
+// Colors.lightBlue[500],
+// Colors.white,
+// ],),
