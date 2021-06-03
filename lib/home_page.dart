@@ -120,11 +120,6 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   child: Column(
                     children: [
-                      Divider(
-                        height: 3,
-                        color: Colors.grey.shade200,
-                        thickness: 3,
-                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 15, vertical: 10),

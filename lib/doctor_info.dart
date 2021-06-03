@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:teletherapy/appoinment_page.dart';
 import 'package:teletherapy/list_page.dart';
 import 'package:teletherapy/model.dart';
 
@@ -401,14 +402,14 @@ class _DoctorInfoState extends State<DoctorInfo> {
                           color: Colors.grey.shade300,
                         ),
                         InkWell(
-                          // onTap: () {
-                          //   Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //       builder: (context) => DoctorInfo(docDetail: therapist),
-                          //     ),
-                          //   );
-                          // },
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AppoinmentPage(),
+                              ),
+                            );
+                          },
                           child: Container(
                             height: 45,
                             width: double.infinity,
