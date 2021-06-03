@@ -42,6 +42,7 @@ dependencies:
   material_floating_search_bar: ^0.3.4
   flutter_rating_bar: ^4.0.0
   flutter_material_pickers: ^2.1.1
+  syncfusion_flutter_datepicker: ^19.1.66-beta
 
 
 dev_dependencies:

@@ -373,7 +373,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                             ),
                             Padding(
                               padding:
-                              const EdgeInsets.only(left: 82, bottom: 22),
+                              const EdgeInsets.only(left:64,bottom: 22),
                               child: Text(
                                 "${widget.docDetail.reviewdate}",
                                 style: TextStyle(

@@ -436,7 +436,7 @@ final doctorinfo = [
         'renal medicine and internal medicine this\n '
         'while dr specializes in dialysys and wild\n'
         ' critical care nephrology.',
-    address: 'Baylor Scott & White All Saints Medical Center - Fort Worth',
+    address: 'Baylor Scott & White All Saints Medical\nCenter - Fort Worth',
     experience: '8 years experience',
     medicalId: 'Medical registration id :3258',
     doctorBio: 'Covid -19 Specialist',

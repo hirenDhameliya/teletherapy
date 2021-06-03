@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teletherapy/date_time_page.dart';
 
 class AppoinmentPage extends StatefulWidget {
   const AppoinmentPage({Key key}) : super(key: key);
@@ -8,6 +9,8 @@ class AppoinmentPage extends StatefulWidget {
 }
 
 class _AppoinmentPageState extends State<AppoinmentPage> {
+  List gender = ["Male", "Female", "Other"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,44 +44,223 @@ class _AppoinmentPageState extends State<AppoinmentPage> {
           ),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Divider(
-            thickness: 3,
-            color: Colors.grey.shade300,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Text(
-              'This consultation is for:',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
-          Container(
-            height: 50,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal:8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Divider(
+                thickness: 3,
+                color: Colors.grey.shade300,
               ),
-              border: Border.all(
-                color: Colors.grey,
-              ),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Icon(
-                  Icons.arrow_drop_down_sharp,
-                  size: 35,
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  'This consultation is for:',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                 ),
-              ],
-            ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                width: double.infinity,
+                height: 58,
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1.5, color: Colors.black26),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    addradiobotton(0, 'Myself'),
+                    addradiobotton(1, 'Family member'),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  'Date of Birth',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                initialValue: '10/5/1998',
+                style: TextStyle(color: Colors.grey.shade700, fontSize: 18),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  'Gender',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                width: double.infinity,
+                height: 58,
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1.5, color: Colors.black26),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    addradiobotton(0, 'male'),
+                    addradiobotton(1, 'Female'),
+                    addradiobotton(2, 'Others'),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  'Height',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                initialValue: '168 Cms',
+                style: TextStyle(color: Colors.grey.shade700, fontSize: 18),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  'Weight',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                initialValue: '80 Kgs',
+                style: TextStyle(color: Colors.grey.shade700, fontSize: 18),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  'What\'s your chief problem',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                initialValue: 'Headache',
+                style: TextStyle(color: Colors.grey.shade700, fontSize: 18),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>DateTimePage(),
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 45,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                    color: Color(0xffBE5FF9),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 12),
+                    child: Text(
+                      'Continue',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
+    );
+  }
+
+  Row addradiobotton(int btnValue, String title) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Radio(
+          activeColor: Colors.green,
+          value: btnValue,
+          groupValue: 0,
+          onChanged: (value) => value = Colors.green,
+        ),
+        Text(title)
+      ],
     );
   }
 }
