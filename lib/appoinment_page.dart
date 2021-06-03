@@ -15,18 +15,20 @@ class _AppoinmentPageState extends State<AppoinmentPage> {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 0.0,
-        leading:  Padding(
+        leading: Padding(
           padding: const EdgeInsets.only(left: 13),
-          child: Image.asset(
-            'assets/image/back.png',
-            height:25,
-            width: 25,
+          child: Padding(
+            padding: const EdgeInsets.all(2.7),
+            child: Image.asset(
+              'assets/image/back.png',
+            ),
           ),
         ),
         centerTitle: true,
         title: Text(
           'Essential Info',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600,color: Colors.black),
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black),
         ),
         actions: [
           Padding(
@@ -37,10 +39,42 @@ class _AppoinmentPageState extends State<AppoinmentPage> {
               width: 37,
             ),
           ),
+        ],
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Divider(
+            thickness: 3,
+            color: Colors.grey.shade300,
+          ),
           Padding(
-            padding: const EdgeInsets.only(top: 10),
-            child: Divider(
-              thickness:3,color: Colors.black,
+            padding: const EdgeInsets.only(left: 10),
+            child: Text(
+              'This consultation is for:',
+              style: TextStyle(fontSize: 15),
+            ),
+          ),
+          Container(
+            height: 50,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.green,
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+              border: Border.all(
+                color: Colors.grey,
+              ),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Icon(
+                  Icons.arrow_drop_down_sharp,
+                  size: 35,
+                ),
+              ],
             ),
           ),
         ],

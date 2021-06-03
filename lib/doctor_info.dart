@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teletherapy/appoinment_page.dart';
-import 'package:teletherapy/list_page.dart';
 import 'package:teletherapy/model.dart';
 
 class DoctorInfo extends StatefulWidget {
