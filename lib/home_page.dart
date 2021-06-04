@@ -16,17 +16,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Detail> categorieslistdata1 = [];
-  List<Detail> categorieslistdata2 = [];
-  List<Detail> therapistlist = [];
+  List<Detail> categoriesListData1 = [];
+  List<Detail> categoriesListData2 = [];
+  List<Detail> therapistList = [];
 
   @override
   void initState() {
     super.initState();
     setState(() {
-      categorieslistdata1 = categories1;
-      categorieslistdata2 = categories2;
-      therapistlist = doctorinfo;
+      categoriesListData1 = categories1;
+      categoriesListData2 = categories2;
+      therapistList = doctorinfo;
     });
   }
 
@@ -147,20 +147,20 @@ class _HomePageState extends State<HomePage> {
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
-                                children: categorieslistdata1
-                                    .map((Detail categorieslist) {
+                                children: categoriesListData1
+                                    .map((Detail categoriesList) {
                                   return CommonWidget.categories(
-                                    categorieslist: categorieslist,
+                                    categoriesList: categoriesList,
                                   );
                                 }).toList(),
                               ),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
-                                children: categorieslistdata2
-                                    .map((Detail categorieslist) {
+                                children: categoriesListData2
+                                    .map((Detail categoriesList) {
                                   return CommonWidget.categories(
-                                    categorieslist: categorieslist,
+                                    categoriesList: categoriesList,
                                   );
                                 }).toList(),
                               ),
@@ -189,7 +189,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Column(
-                        children: therapistlist.map((Detail therapist) {
+                        children: therapistList.map((Detail therapist) {
                           return CommonWidget.therapist(
                             therapist: therapist,
                             context: context,

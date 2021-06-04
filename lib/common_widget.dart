@@ -9,7 +9,7 @@ import 'model.dart';
 
 class CommonWidget {
   static Widget categories({
-    Detail categorieslist,
+    Detail categoriesList,
   }) {
     return Padding(
       padding: const EdgeInsets.all(10),
@@ -38,13 +38,13 @@ class CommonWidget {
               backgroundColor: Colors.grey,
               child: Image(
                 image: Svg(
-                  "${categorieslist.image}",
+                  "${categoriesList.image}",
                 ),
                 fit: BoxFit.cover,
               ),
             ),
             Text(
-              "${categorieslist.name}",
+              "${categoriesList.name}",
               style: TextStyle(fontSize: 12),
             ),
           ],
@@ -200,19 +200,22 @@ class CommonWidget {
   }
 
   static Widget Appoinmentslot(String time) {
-    return Container(
-      height:40,
-      width: 80,
-      decoration: BoxDecoration(
-        border: Border.all(width: 1.5, color: Colors.black26),
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
+    return Padding(
+      padding: const EdgeInsets.only(left: 10),
+      child: Container(
+        height:40,
+        width: 80,
+        decoration: BoxDecoration(
+          border: Border.all(width: 1.5, color: Colors.black26),
+          borderRadius: BorderRadius.all(
+            Radius.circular(10),
+          ),
         ),
+        child: Text(
+          '$time',
+        ),
+        alignment: Alignment.center,
       ),
-      child: Text(
-        '$time',
-      ),
-      alignment: Alignment.center,
     );
   }
 }

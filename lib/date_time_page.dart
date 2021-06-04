@@ -12,28 +12,18 @@ class DateTimePage extends StatefulWidget {
 }
 
 class _DateTimePageState extends State<DateTimePage> {
-  String _selectedDate = '';
-  String _dateCount = '';
-  String _range = '';
-  String _rangeCount = '';
+  DateTime selectedDate = DateTime.now();
 
-  void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
-    setState(() {
-      if (args.value is PickerDateRange) {
-        _range =
-            DateFormat('dd/MM/yyyy').format(args.value.startDate).toString() +
-                ' - ' +
-                DateFormat('dd/MM/yyyy')
-                    .format(args.value.endDate ?? args.value.startDate)
-                    .toString();
-      } else if (args.value is DateTime) {
-        _selectedDate = args.value.toString();
-      } else if (args.value is List<DateTime>) {
-        _dateCount = args.value.length.toString();
-      } else {
-        _rangeCount = args.value.length.toString();
-      }
-    });
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: DateTime(2015, 8),
+        lastDate: DateTime(2101));
+    if (picked != null && picked != selectedDate)
+      setState(() {
+        selectedDate = picked;
+      });
   }
 
   @override
@@ -48,11 +38,11 @@ class _DateTimePageState extends State<DateTimePage> {
           child: Padding(
             padding: const EdgeInsets.all(2.7),
             child: InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.pop(
                   context,
                   MaterialPageRoute(
-                    builder: (context) =>AppoinmentPage(),
+                    builder: (context) => AppoinmentPage(),
                   ),
                 );
               },
@@ -79,105 +69,162 @@ class _DateTimePageState extends State<DateTimePage> {
           ),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Divider(
-            thickness: 3,
-            color: Colors.grey.shade300,
-          ),
-          SfDateRangePicker(
-            onSelectionChanged: _onSelectionChanged,
-            selectionMode: DateRangePickerSelectionMode.range,
-            initialSelectedRange: PickerDateRange(
-              DateTime.now().subtract(const Duration(days: 4)),
-              DateTime.now().add(
-                const Duration(days: 3),
-              ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Divider(
+              thickness: 3,
+              color: Colors.grey.shade300,
             ),
-          ),
-          Divider(
-            thickness: 3,
-            color: Colors.grey.shade300,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15,top:15),
-            child: Text(
-              'Morning',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
+            Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-               CommonWidget.Appoinmentslot('9:00 AM'),
-               CommonWidget.Appoinmentslot('10:00 AM'),
-               CommonWidget.Appoinmentslot('11:00 AM'),
-               CommonWidget.Appoinmentslot('12:00 PM'),
-               CommonWidget.Appoinmentslot('1:00 PM'),
+                // Text("${selectedDate.toLocal()}".split(' ')[0]),
+                Stack(
+                  children: [
+                    Container(
+                      height: 300,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/image/bookbg.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top:226,left: 103),
+                      child: TextButton(
+                        child: Container(
+                          height:30,
+                          width: 90,
+                          decoration: BoxDecoration(
+                            color: Colors.red.shade50,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(15),
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Select Date ',
+                              style: TextStyle(
+                                fontSize:12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                        onPressed: () => _selectDate(context),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15,top: 15),
-            child: Text(
-              'Evening',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CommonWidget.Appoinmentslot('4:30 PM'),
-                CommonWidget.Appoinmentslot('5:30 PM'),
-                CommonWidget.Appoinmentslot('6:30 PM'),
-                CommonWidget.Appoinmentslot('7:30 PM'),
-                CommonWidget.Appoinmentslot('8:30 PM'),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          InkWell(
-            onTap: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>ConfirmPage(),
-                ),
-              );
-            },
-            child: Container(
-              height: 45,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10),
-                ),
-                color: Color(0xffBE5FF9),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 12),
-                child: Text(
-                  'Continue',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.only(top: 3),
+                  child: Divider(
+                    thickness: 3,
+                    color: Colors.grey.shade300,
                   ),
-                  textAlign: TextAlign.center,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15, top: 15),
+                  child: Text(
+                    'Morning',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                  ),
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10, top: 10),
+                    child: Row(
+                      children: [
+                        CommonWidget.Appoinmentslot('9:00 AM'),
+                        CommonWidget.Appoinmentslot('10:00 AM'),
+                        CommonWidget.Appoinmentslot('11:00 AM'),
+                        CommonWidget.Appoinmentslot('12:00 PM'),
+                        CommonWidget.Appoinmentslot('1:00 PM'),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15, top: 15),
+                  child: Text(
+                    'Evening',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                  ),
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10, top: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CommonWidget.Appoinmentslot('4:30 PM'),
+                        CommonWidget.Appoinmentslot('5:30 PM'),
+                        CommonWidget.Appoinmentslot('6:30 PM'),
+                        CommonWidget.Appoinmentslot('7:30 PM'),
+                        CommonWidget.Appoinmentslot('8:30 PM'),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 75,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ConfirmPage(),
+                  ),
+                );
+              },
+              child: Container(
+                height: 45,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  color: Color(0xffBE5FF9),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: Text(
+                    'Continue',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-        ],
+            SizedBox(
+              height: 10,
+            ),
+          ],
+        ),
       ),
     );
   }
