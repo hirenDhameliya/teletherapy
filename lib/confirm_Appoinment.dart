@@ -80,7 +80,18 @@ class _ConfirmPageState extends State<ConfirmPage> {
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
                 ),
-                color: Colors.redAccent,
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  stops: [
+                    0.2,
+                    0.7,
+                  ],
+                  colors: [
+                    Color(0xfff2709c),
+                    Color(0xffFF4E50),
+                  ],
+                ),
               ),
               child: Padding(
                 padding: const EdgeInsets.only(top: 10),
@@ -92,6 +103,17 @@ class _ConfirmPageState extends State<ConfirmPage> {
                     color: Colors.white,
                   ),
                   textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical:20),
+              child: Text(
+                'Doctor\'s fees.......................................\$300',
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey.shade700,
                 ),
               ),
             ),
@@ -116,7 +138,18 @@ class _ConfirmPageState extends State<ConfirmPage> {
                   borderRadius: BorderRadius.all(
                     Radius.circular(10),
                   ),
-                  color: Color(0xffBE5FF9),
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    stops: [
+                      0.2,
+                      0.7,
+                    ],
+                    colors: [
+                      Color(0xff6E48AA),
+                      Color(0xff9D50BB),
+                    ],
+                  ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 12),

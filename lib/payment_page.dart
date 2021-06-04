@@ -154,6 +154,8 @@ class _PayMentPageState extends State<PayMentPage> {
                       style:
                           TextStyle(color: Colors.grey.shade700, fontSize: 18),
                       decoration: InputDecoration(
+                        hintText: 'Enter Your Name',
+                        hintStyle:  TextStyle(color: Colors.grey.shade400, fontSize:15),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(10),
@@ -175,6 +177,8 @@ class _PayMentPageState extends State<PayMentPage> {
                       style:
                           TextStyle(color: Colors.grey.shade700, fontSize: 18),
                       decoration: InputDecoration(
+                        hintText: 'Enter Your Card Number',
+                        hintStyle:  TextStyle(color: Colors.grey.shade400, fontSize:15),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(10),
@@ -354,7 +358,7 @@ class _PayMentPageState extends State<PayMentPage> {
                           width: 24,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: _selected ? Colors.deepPurple : Colors.white,
+                            color: _selected ? Color(0xff9D50BB) : Colors.white,
                             border: Border.all(color: Colors.black45),
                           ),
                           child: Padding(
@@ -389,7 +393,18 @@ class _PayMentPageState extends State<PayMentPage> {
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
-                        color: Color(0xffBE5FF9),
+                        gradient: LinearGradient(
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                          stops: [
+                            0.2,
+                            0.7,
+                          ],
+                          colors: [
+                            Color(0xff6E48AA),
+                            Color(0xff9D50BB),
+                          ],
+                        ),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.only(top: 12),

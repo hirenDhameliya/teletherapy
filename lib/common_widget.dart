@@ -10,6 +10,7 @@ import 'model.dart';
 class CommonWidget {
   static Widget categories({
     Detail categoriesList,
+    BuildContext context,
   }) {
     return Padding(
       padding: const EdgeInsets.all(10),
@@ -202,19 +203,27 @@ class CommonWidget {
   static Widget Appoinmentslot(String time) {
     return Padding(
       padding: const EdgeInsets.only(left: 10),
-      child: Container(
-        height:40,
-        width: 80,
-        decoration: BoxDecoration(
-          border: Border.all(width: 1.5, color: Colors.black26),
-          borderRadius: BorderRadius.all(
-            Radius.circular(10),
+      child: InkWell(
+        onTap: () {
+          // setState(() {
+          //
+          //   _selected = !_selected;
+          // });
+        },
+        child: Container(
+          height:40,
+          width: 80,
+          decoration: BoxDecoration(
+            border: Border.all(width: 1.5, color: Colors.black26),
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
           ),
+          child: Text(
+            '$time',
+          ),
+          alignment: Alignment.center,
         ),
-        child: Text(
-          '$time',
-        ),
-        alignment: Alignment.center,
       ),
     );
   }

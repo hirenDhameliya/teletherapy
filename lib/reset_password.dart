@@ -18,7 +18,20 @@ class _ResetasswordState extends State<Resetassword> {
         child: Stack(
           children: [
             Container(
-              color: Color(0xffBE5FF9),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.centerLeft,
+                  stops: [
+                    0.2,
+                    0.7,
+                  ],
+                  colors: [
+                    Color(0xff6E48AA),
+                    Color(0xff9D50BB),
+                  ],
+                ),
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -105,7 +118,7 @@ class _ResetasswordState extends State<Resetassword> {
                               decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.lock,
-                                  color: Color(0xffBE5FF9),
+                                  color:Color(0xff9D50BB),
                                 ),
                                 hintText: 'Password',
                                 hintStyle: TextStyle(
@@ -161,7 +174,7 @@ class _ResetasswordState extends State<Resetassword> {
                               decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.vpn_key,
-                                  color: Color(0xffBE5FF9),
+                                  color:Color(0xff9D50BB),
                                 ),
                                 hintText: ' Confirm Password',
                                 hintStyle: TextStyle(
@@ -226,7 +239,18 @@ class _ResetasswordState extends State<Resetassword> {
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(10),
                                   ),
-                                  color: Color(0xffBE5FF9),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    stops: [
+                                      0.2,
+                                      0.7,
+                                    ],
+                                    colors: [
+                                      Color(0xff6E48AA),
+                                      Color(0xff9D50BB),
+                                    ],
+                                  ),
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.only(top:12),

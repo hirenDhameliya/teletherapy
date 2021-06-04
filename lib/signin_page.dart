@@ -24,7 +24,20 @@ class _SignInPageState extends State<SignInPage> {
         child: Stack(
           children: [
             Container(
-              color: Color(0xffBE5FF9),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.centerLeft,
+                  stops: [
+                    0.2,
+                    0.7,
+                  ],
+                  colors: [
+                    Color(0xff6E48AA),
+                    Color(0xff9D50BB),
+                  ],
+                ),
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -121,21 +134,22 @@ class _SignInPageState extends State<SignInPage> {
                                     decoration: InputDecoration(
                                       prefixIcon: Icon(
                                         Icons.local_post_office,
-                                        color: Color(0xffBE5FF9),
+                                        color: Color(0xff9D50BB),
+                                        size: 25,
                                       ),
                                       hintText: 'Email',
                                       hintStyle: TextStyle(
                                           color: Colors.black38,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 15),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: Colors.black38,
-                                          width: 1.5,
-                                        ),
-                                      ),
+                                      // enabledBorder: OutlineInputBorder(
+                                      //   borderRadius: BorderRadius.all(
+                                      //       Radius.circular(10)),
+                                      //   borderSide: BorderSide(
+                                      //     color: Colors.black38,
+                                      //     width: 1.5,
+                                      //   ),
+                                      // ),
                                       border: OutlineInputBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10),
@@ -163,7 +177,7 @@ class _SignInPageState extends State<SignInPage> {
                                     decoration: InputDecoration(
                                       prefixIcon: Icon(
                                         Icons.lock,
-                                        color: Color(0xffBE5FF9),
+                                        color: Color(0xff9D50BB),
                                       ),
                                       hintText: 'Password',
                                       hintStyle: TextStyle(
@@ -229,7 +243,7 @@ class _SignInPageState extends State<SignInPage> {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: _selected
-                                          ? Colors.deepPurple
+                                          ? Color(0xff9D50BB)
                                           : Colors.white,
                                       border: Border.all(color: Colors.black45),
                                     ),
@@ -238,7 +252,7 @@ class _SignInPageState extends State<SignInPage> {
                                         child: _selected
                                             ? Icon(
                                                 Icons.check,
-                                                size:15,
+                                                size: 15,
                                                 color: Colors.white,
                                               )
                                             : Container()),
@@ -249,7 +263,7 @@ class _SignInPageState extends State<SignInPage> {
                                   child: Text('Remember me'),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left:80),
+                                  padding: const EdgeInsets.only(left: 80),
                                   child: TextButton(
                                     onPressed: () {
                                       Navigator.push(
@@ -260,7 +274,13 @@ class _SignInPageState extends State<SignInPage> {
                                         ),
                                       );
                                     },
-                                    child: Text('Forgot Password?',style:TextStyle(fontSize: 12),),
+                                    child: Text(
+                                      'Forgot Password?',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color(0xff9D50BB),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ],
@@ -275,20 +295,31 @@ class _SignInPageState extends State<SignInPage> {
                                 );
                               },
                               child: Container(
-                                height:45,
+                                height: 45,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(10),
                                   ),
-                                  color: Color(0xffBE5FF9),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    stops: [
+                                      0.2,
+                                      0.7,
+                                    ],
+                                    colors: [
+                                      Color(0xff6E48AA),
+                                      Color(0xff9D50BB),
+                                    ],
+                                  ),
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.only(top: 12),
                                   child: Text(
                                     'Sign In',
                                     style: TextStyle(
-                                      fontSize:18,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -304,7 +335,7 @@ class _SignInPageState extends State<SignInPage> {
                                   child: Text('Don\'t have an account ?'),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left:5      ),
+                                  padding: const EdgeInsets.only(left: 5),
                                   child: TextButton(
                                     onPressed: () {
                                       Navigator.push(
@@ -317,9 +348,9 @@ class _SignInPageState extends State<SignInPage> {
                                     child: Text(
                                       'Sign Up',
                                       style: TextStyle(
-                                        fontSize:14,
+                                        fontSize: 14,
                                         fontWeight: FontWeight.w500,
-                                        color: Color(0xffBE5FF9),
+                                        color: Color(0xff9D50BB),
                                       ),
                                     ),
                                   ),

@@ -18,7 +18,20 @@ class _ForGotPasswordState extends State<ForGotPassword> {
         child: Stack(
           children: [
             Container(
-              color: Color(0xffBE5FF9),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.centerLeft,
+                  stops: [
+                    0.2,
+                    0.7,
+                  ],
+                  colors: [
+                    Color(0xff6E48AA),
+                    Color(0xff9D50BB),
+                  ],
+                ),
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -102,7 +115,7 @@ class _ForGotPasswordState extends State<ForGotPassword> {
                                 decoration: InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.local_post_office,
-                                    color: Color(0xffBE5FF9),
+                                    color: Color(0xff9D50BB),
                                   ),
                                   hintText: 'Email',
                                   hintStyle: TextStyle(
@@ -155,7 +168,18 @@ class _ForGotPasswordState extends State<ForGotPassword> {
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(10),
                                   ),
-                                  color: Color(0xffBE5FF9),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    stops: [
+                                      0.2,
+                                      0.7,
+                                    ],
+                                    colors: [
+                                      Color(0xff6E48AA),
+                                      Color(0xff9D50BB),
+                                    ],
+                                  ),
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.only(top: 12),

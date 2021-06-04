@@ -6,7 +6,7 @@ import 'package:teletherapy/model.dart';
 class DoctorInfo extends StatefulWidget {
   final Detail docDetail;
 
-  const DoctorInfo({Key key, this.docDetail}) : super(key: key);
+  const DoctorInfo({key, this.docDetail}) : super(key: key);
 
   @override
   _DoctorInfoState createState() => _DoctorInfoState();
@@ -53,7 +53,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
                                         image:
-                                        AssetImage(widget.docDetail.image),
+                                            AssetImage(widget.docDetail.image),
                                         fit: BoxFit.fill,
                                       ),
                                     ),
@@ -148,7 +148,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                     padding: const EdgeInsets.only(left: 15),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           'Experience',
@@ -159,7 +159,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                         ),
                                         Padding(
                                           padding:
-                                          const EdgeInsets.only(top: 7),
+                                              const EdgeInsets.only(top: 7),
                                           child: Text(
                                             "${widget.docDetail.experience}",
                                             style: TextStyle(
@@ -185,17 +185,17 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                     padding: const EdgeInsets.only(left: 15),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Padding(
                                           padding:
-                                          const EdgeInsets.only(top: 7),
+                                              const EdgeInsets.only(top: 7),
                                           child:
-                                          Text('Verified Doctor License'),
+                                              Text('Verified Doctor License'),
                                         ),
                                         Padding(
                                           padding:
-                                          const EdgeInsets.only(top: 7),
+                                              const EdgeInsets.only(top: 7),
                                           child: Text(
                                             "${widget.docDetail.medicalId}",
                                             style: TextStyle(
@@ -221,16 +221,16 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                     padding: const EdgeInsets.only(left: 15),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Padding(
                                           padding:
-                                          const EdgeInsets.only(top: 7),
+                                              const EdgeInsets.only(top: 7),
                                           child: Text('Area Of Expertise '),
                                         ),
                                         Padding(
                                           padding:
-                                          const EdgeInsets.only(top: 7),
+                                              const EdgeInsets.only(top: 7),
                                           child: Text(
                                             "${widget.docDetail.doctorBio}",
                                             style: TextStyle(
@@ -256,17 +256,17 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                     padding: const EdgeInsets.only(left: 15),
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Padding(
                                           padding:
-                                          const EdgeInsets.only(top: 7),
+                                              const EdgeInsets.only(top: 7),
                                           child:
-                                          Text('Hospital Name & Address'),
+                                              Text('Hospital Name & Address'),
                                         ),
                                         Padding(
                                           padding:
-                                          const EdgeInsets.only(top: 7),
+                                              const EdgeInsets.only(top: 7),
                                           child: Text(
                                             "${widget.docDetail.address}",
                                             style: TextStyle(
@@ -321,7 +321,18 @@ class _DoctorInfoState extends State<DoctorInfo> {
                             borderRadius: BorderRadius.all(
                               Radius.circular(10),
                             ),
-                            color: Color(0xffBE5FF9),
+                            gradient: LinearGradient(
+                              begin: Alignment.topRight,
+                              end: Alignment.bottomLeft,
+                              stops: [
+                                0.2,
+                                0.7,
+                              ],
+                              colors: [
+                                Color(0xff6E48AA),
+                                Color(0xff9D50BB),
+                              ],
+                            ),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.only(top: 12),
@@ -373,7 +384,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                             ),
                             Padding(
                               padding:
-                              const EdgeInsets.only(left:55,bottom: 22),
+                                  const EdgeInsets.only(left: 55, bottom: 22),
                               child: Text(
                                 "${widget.docDetail.reviewdate}",
                                 style: TextStyle(
@@ -416,7 +427,18 @@ class _DoctorInfoState extends State<DoctorInfo> {
                               borderRadius: BorderRadius.all(
                                 Radius.circular(10),
                               ),
-                              color: Color(0xffBE5FF9),
+                              gradient: LinearGradient(
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomLeft,
+                                stops: [
+                                  0.2,
+                                  0.7,
+                                ],
+                                colors: [
+                                  Color(0xff6E48AA),
+                                  Color(0xff9D50BB),
+                                ],
+                              ),
                             ),
                             child: Padding(
                               padding: const EdgeInsets.only(top: 12),
@@ -432,7 +454,9 @@ class _DoctorInfoState extends State<DoctorInfo> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10,)
+                        SizedBox(
+                          height: 10,
+                        )
                       ],
                     ),
                   ),

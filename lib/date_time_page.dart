@@ -81,7 +81,6 @@ class _DateTimePageState extends State<DateTimePage> {
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Text("${selectedDate.toLocal()}".split(' ')[0]),
                 Stack(
                   children: [
                     Container(
@@ -204,7 +203,18 @@ class _DateTimePageState extends State<DateTimePage> {
                   borderRadius: BorderRadius.all(
                     Radius.circular(10),
                   ),
-                  color: Color(0xffBE5FF9),
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    stops: [
+                      0.2,
+                      0.7,
+                    ],
+                    colors: [
+                      Color(0xff6E48AA),
+                      Color(0xff9D50BB),
+                    ],
+                  ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 12),
