@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teletherapy/date_time_page.dart';
+import 'package:teletherapy/home_page.dart';
 
 class AppoinmentPage extends StatefulWidget {
   const AppoinmentPage({Key key}) : super(key: key);
@@ -22,8 +23,18 @@ class _AppoinmentPageState extends State<AppoinmentPage> {
           padding: const EdgeInsets.only(left: 13),
           child: Padding(
             padding: const EdgeInsets.all(2.7),
-            child: Image.asset(
-              'assets/image/back.png',
+            child: InkWell(
+              onTap: (){
+                Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>HomePage(),
+                  ),
+                );
+              },
+              child: Image.asset(
+                'assets/image/back.png',
+              ),
             ),
           ),
         ),
@@ -241,6 +252,9 @@ class _AppoinmentPageState extends State<AppoinmentPage> {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 10,
               ),
             ],
           ),
